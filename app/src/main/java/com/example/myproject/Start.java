@@ -7,15 +7,15 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
 /**
  * Created by Somoff on 11.08.2015.
  */
-public class Start extends Activity {
+public class Start extends Activity  {
     String url = "https://vk.com/som0ff";
 
 
@@ -24,6 +24,8 @@ public class Start extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start_layout);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+       // requestWindowFeature(Window.FEATURE_NO_TITLE); не работает
+
     }
 
     public void OnClickBrouser(View view) {
@@ -60,5 +62,9 @@ public class Start extends Activity {
                 });
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
+    }
+    public void Chooseweapon(View view){
+        Intent choose = new Intent(getApplicationContext(),Main.class);
+        startActivity(choose);
     }
 }
