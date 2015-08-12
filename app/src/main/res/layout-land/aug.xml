@@ -4,10 +4,10 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
-    <ImageButton
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton6"
+        android:id="@+id/imageView"
         android:background="@drawable/assaultrifle_aug"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />

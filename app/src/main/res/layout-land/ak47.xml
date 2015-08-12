@@ -6,10 +6,10 @@
     android:layout_height="fill_parent">
 
 
-    <ImageButton
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton4"
+        android:id="@+id/imageView4"
         android:background="@drawable/assaultrifle_ak47"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
