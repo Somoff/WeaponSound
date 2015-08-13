@@ -98,5 +98,10 @@ public class ak47 extends Activity {
         startActivity(intent);
         overridePendingTransition(R.anim.twotoone, R.anim.twotoonee);
     }
+
+        public void onClick11(View v) {
+            startActivity(new Intent(this,
+                    Testactivity.class));
+        };
 }
 
