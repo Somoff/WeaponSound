@@ -2,7 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-
+android:background="@drawable/bacckgrond"
     android:layout_height="fill_parent">
 
     <ImageView
@@ -13,4 +13,25 @@
         android:layout_centerVertical="true"
         android:onClick="backaug"
         android:layout_centerHorizontal="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Назад"
+        android:id="@+id/button3"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/imageView3"
+        android:layout_marginBottom="31dp"
+        android:onClick="backak74" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Далее"
+        android:id="@+id/button4"
+        android:layout_alignBottom="@+id/button3"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="37dp"
+        android:onClick="Ak74go"/>
+
 </RelativeLayout>

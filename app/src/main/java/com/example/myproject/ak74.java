@@ -9,22 +9,22 @@ import android.view.View;
 /**
  * Created by Somoff on 13.08.2015.
  */
-public class aug_activity extends Activity {
+public class ak74 extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.aug);
+        setContentView(R.layout.ak74);
     }
 
-
-    public void backaug(View view){
-        Intent intent = new Intent(getApplicationContext(), ak47.class);
+    public void backak74(View view) {
+        Intent intent = new Intent(getApplicationContext(), aug_activity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.twotoone, R.anim.twotoonee);
     }
-    public void goaug(View view){
-        Intent intent = new Intent(getApplicationContext(), ak74.class);
+
+    public void Ak74go(View view) {
+        Intent intent = new Intent(this, m4a1.class);
         startActivity(intent);
         overridePendingTransition(R.anim.onetotwo, R.anim.onetwoo);
     }

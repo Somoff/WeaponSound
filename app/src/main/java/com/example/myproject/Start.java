@@ -79,7 +79,7 @@ public class Start extends Activity  {
 
 
     public void Chooseweapon(View view){
-        Intent intent = new Intent(this, ak47_activity.class);
+        Intent intent = new Intent(this, ak47.class);
         startActivity(intent);
         overridePendingTransition(R.anim.onetotwo, R.anim.onetwoo);
     }

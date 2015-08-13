@@ -9,22 +9,50 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView4"
+        android:id="@+id/btnBass1"
         android:background="@drawable/assaultrifle_ak47"
 
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:onClick="Chooseweaponak47" />
+        android:onClick="Play" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="Далее"
         android:onClick="Ak47go"
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="39dp"
         android:layout_marginBottom="28dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/txtnumber"
+        android:layout_alignBottom="@+id/btnBass1"
+        android:layout_alignStart="@+id/btnBass1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Перезарядка"
+        android:id="@+id/button2"
+        android:onClick="Reweapon"
+        android:layout_alignTop="@+id/button"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Назад"
+        android:onClick="backak47"
+        android:id="@+id/button5"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="26dp" />
 
 </RelativeLayout>
