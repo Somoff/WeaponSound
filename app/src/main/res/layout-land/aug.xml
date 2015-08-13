@@ -2,6 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
+android:background="@drawable/bacckgrond"
     android:layout_height="fill_parent">
 
     <ImageView
@@ -11,4 +12,15 @@
         android:background="@drawable/assaultrifle_aug"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button3"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:onClick="backaug" />
+
 </RelativeLayout>
