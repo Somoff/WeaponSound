@@ -35,6 +35,11 @@ public class Allmusicgun extends Activity {
         public static final int S2 = R.raw.block;
         public static final int S3 = R.raw.reload;
         public static final int S4 = R.raw.ak74_fire;
+        public static final int S5 = R.raw.reloadaug;
+        public static final int S6 = R.raw.reloadak74;
+        public static final int S7 = R.raw.aug_fire;
+        public static final int S8 = R.raw.reloadm4a1;
+        public static final int S9 = R.raw.m4a1_fire;
 
         public static SoundPool soundPool;
         public static HashMap<Integer, Integer> soundPoolMap;
@@ -47,6 +52,11 @@ public class Allmusicgun extends Activity {
             soundPoolMap.put(S1, soundPool.load(context, R.raw.ak47_fire, 1));
             soundPoolMap.put(S2, soundPool.load(context, R.raw.block,1));
             soundPoolMap.put(S3, soundPool.load(context, R.raw.reload,1));
+            soundPoolMap.put(S5, soundPool.load(context, R.raw.reloadaug,1));
+            soundPoolMap.put(S6, soundPool.load(context, R.raw.reloadak74,1));
+            soundPoolMap.put(S7, soundPool.load(context, R.raw.aug_fire,1));
+            soundPoolMap.put(S8, soundPool.load(context, R.raw.reloadm4a1,1));
+            soundPoolMap.put(S9, soundPool.load(context, R.raw.m4a1_fire,1));
 
         }
         /** Play a given sound in the soundPool */

@@ -12,7 +12,8 @@
         android:id="@+id/imageView2"
         android:background="@drawable/assaultrifle_m4a1"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="Play3" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,4 +34,22 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="37dp"
         android:onClick="m4a1go" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Перезарядка"
+        android:id="@+id/button9"
+        android:layout_alignBottom="@+id/button4"
+        android:layout_centerHorizontal="true"
+        android:onClick="Reweapon3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/textView222"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2" />
 </RelativeLayout>

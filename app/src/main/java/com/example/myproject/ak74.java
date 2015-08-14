@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 /**
  * Created by Somoff on 13.08.2015.
@@ -15,8 +16,10 @@ public class ak74 extends Allmusicgun {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ak74);
+        patron1 = (TextView) findViewById(R.id.textView42);
+        patron1.setText(String.valueOf(patron));
     }
-        public void Play1(View v) { //Клик на выстрел
+        public void Play2(View v) { //Клик на выстрел
             if ((patron <=30) && (patron > 0)){
                 Allmusicgun.OurSoundPlayer.playSound(this, Allmusicgun.OurSoundPlayer.S4, 0);
                 patron = patron - 1;
@@ -25,12 +28,12 @@ public class ak74 extends Allmusicgun {
             }
         }
 
-        public void Reweapon1(View v){//Перезарядка
-            Allmusicgun.OurSoundPlayer.playSound(this, Allmusicgun.OurSoundPlayer.S3, 0);
+        public void Reweapon2(View v){//Перезарядка
+            Allmusicgun.OurSoundPlayer.playSound(this, Allmusicgun.OurSoundPlayer.S6, 0);
             patron=30;
             patron1.setText(String.valueOf(patron));
             try {
-                Thread.sleep(3500);
+                Thread.sleep(1000);
             }
             catch (InterruptedException ex){
                 Thread.currentThread().interrupt();

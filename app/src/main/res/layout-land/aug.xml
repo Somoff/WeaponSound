@@ -10,8 +10,10 @@ android:background="@drawable/bacckgrond"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:background="@drawable/assaultrifle_aug"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:onClick="Play1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -20,7 +22,8 @@ android:background="@drawable/bacckgrond"
         android:id="@+id/button3"
         android:onClick="backaug"
         android:layout_below="@+id/imageView"
-        android:layout_toStartOf="@+id/imageView" />
+        android:layout_toStartOf="@+id/imageView"
+        android:layout_marginTop="46dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -31,5 +34,24 @@ android:background="@drawable/bacckgrond"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="37dp"
         android:onClick="goaug" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Перезарядка"
+        android:id="@+id/button7"
+        android:onClick="Reweapon1"
+        android:layout_alignTop="@+id/button3"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/textView535"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/button3"
+        android:layout_marginStart="39dp" />
 
 </RelativeLayout>
