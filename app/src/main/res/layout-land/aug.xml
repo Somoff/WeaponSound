@@ -85,4 +85,12 @@ android:background="@drawable/bacckgrond"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/imageButton11" />
 
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinneraug"
+        android:layout_alignBottom="@+id/imageShare"
+        android:layout_alignEnd="@+id/imageButton12"
+        android:layout_toEndOf="@+id/imageShare" />
+
 </RelativeLayout>

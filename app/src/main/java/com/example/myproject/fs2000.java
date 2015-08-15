@@ -4,18 +4,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
-/**
- * Created by Somoff on 15.08.2015.
- */
+
 public class fs2000 extends Allmusicgun implements View.OnTouchListener {
     Timer timer;
+    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +27,72 @@ public class fs2000 extends Allmusicgun implements View.OnTouchListener {
         patron1.setText(String.valueOf(patron));
         ImageView something = (ImageView) findViewById(R.id.fs2000View);
         something.setOnTouchListener(this);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+
+        android.widget.Spinner spinner = (android.widget.Spinner) findViewById(R.id.spinnerfs);
+        spinner.setAdapter(adapter);
+
+        spinner.setSelection(5, true);
+
+        adapter.notifyDataSetChanged();
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                CustomAdapter.flag = true;
+
+                if (position == 0) {
+                    Toast.makeText(fs2000.this, "Weapon Selected AK47", Toast.LENGTH_SHORT).show();
+                    Intent ak47 = new Intent(getApplicationContext(), ak47.class);
+                    startActivity(ak47);
+                }
+                if (position == 1) {
+                    Toast.makeText(fs2000.this, "Weapon Selected AK74", Toast.LENGTH_SHORT).show();
+                    Intent ak74 = new Intent(getApplicationContext(), ak74.class);
+                    startActivity(ak74);
+                }
+                if (position == 2) {
+                    Toast.makeText(fs2000.this, "Weapon Selected AUG", Toast.LENGTH_SHORT).show();
+                    Intent aug = new Intent(getApplicationContext(), aug_activity.class);
+                    startActivity(aug);
+                }
+                if (position == 3) {
+                    Toast.makeText(fs2000.this, "Weapon Selected M4A1", Toast.LENGTH_SHORT).show();
+                    Intent m4a1 = new Intent(getApplicationContext(), m4a1.class);
+                    startActivity(m4a1);
+
+                }
+                if (position == 4) {
+                    Toast.makeText(fs2000.this, "Weapon Selected FAMAS", Toast.LENGTH_SHORT).show();
+                    Intent famas = new Intent(getApplicationContext(), Famas.class);
+                    startActivity(famas);
+                }
+
+                if (position == 5) {
+                    Toast.makeText(fs2000.this, "Weapon Selected FS2000", Toast.LENGTH_SHORT).show();
+                    Intent fs2000 = new Intent(getApplicationContext(), fs2000.class);
+                    startActivity(fs2000);
+                }
+                if (position == 6) {
+                    Toast.makeText(fs2000.this, "Weapon Selected G36C", Toast.LENGTH_SHORT).show();
+                    Intent g36c = new Intent(getApplicationContext(), g36c.class);
+                    startActivity(g36c);
+                }
+            }
+
+
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) {
+            }
+
+        });
+
     }
+
+
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {

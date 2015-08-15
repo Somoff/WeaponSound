@@ -84,7 +84,13 @@
         android:layout_below="@+id/famasview"
         android:layout_alignStart="@+id/imageButton13" />
 
-
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerfamas"
+        android:layout_alignBottom="@+id/imageShare"
+        android:layout_alignEnd="@+id/imageButton14"
+        android:layout_toEndOf="@+id/imageShare" />
 
 
 </RelativeLayout>

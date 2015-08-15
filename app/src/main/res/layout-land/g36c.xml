@@ -83,5 +83,13 @@
         android:layout_alignBottom="@+id/imageEmail"
         android:layout_toEndOf="@+id/imageEmail" />
 
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerg36c"
+        android:layout_alignTop="@+id/imageShare"
+        android:layout_alignEnd="@+id/imageButton9"
+        android:layout_toEndOf="@+id/imageShare" />
+
 
 </RelativeLayout>
