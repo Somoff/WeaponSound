@@ -67,7 +67,7 @@ public class ak74 extends Allmusicgun implements View.OnTouchListener {
         if (event.getAction() == MotionEvent.ACTION_DOWN ) {
             if (timer2 == null ) {
                 timer2 = new Timer();
-                timer2.scheduleAtFixedRate(new UpdateTimeTask2(), 1000, 260);}
+                timer2.scheduleAtFixedRate(new UpdateTimeTask2(), 50, 250);}
         } else if (event.getAction() == MotionEvent.ACTION_UP ) {
             timer2.cancel();
             timer2 = null;

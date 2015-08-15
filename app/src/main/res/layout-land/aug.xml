@@ -8,7 +8,7 @@ android:background="@drawable/bacckgrond"
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView"
+        android:id="@+id/imageView64"
         android:background="@drawable/assaultrifle_aug"
         android:onClick="Play1"
         android:layout_alignParentTop="true"
@@ -21,8 +21,8 @@ android:background="@drawable/bacckgrond"
         android:text="Назад"
         android:id="@+id/button3"
         android:onClick="backaug"
-        android:layout_below="@+id/imageView"
-        android:layout_toStartOf="@+id/imageView"
+        android:layout_below="@+id/imageView64"
+        android:layout_toStartOf="@+id/imageView64"
         android:layout_marginTop="46dp" />
 
     <Button
