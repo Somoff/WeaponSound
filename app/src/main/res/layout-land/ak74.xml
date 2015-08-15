@@ -70,20 +70,20 @@ android:background="@drawable/bacckgrond"
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton9"
-        android:background="@drawable/back_21"
-        android:layout_above="@+id/textView42"
-        android:layout_alignParentStart="true"
-        android:onClick="backak74" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/imageButton10"
         android:background="@drawable/reload"
         android:layout_below="@+id/imageView3"
         android:layout_alignStart="@+id/imageButton8"
         android:onClick="Reweapon2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView6"
+        android:background="@drawable/back_21"
+        android:onClick="backak74"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>

@@ -72,20 +72,19 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton6"
-        android:background="@drawable/back_21"
-        android:onClick="backak47"
-        android:layout_above="@+id/txtnumber"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="4dp" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/imageButton7"
         android:background="@drawable/reload"
         android:onClick="Reweapon"
         android:layout_below="@+id/btnBass1"
         android:layout_alignStart="@+id/imageButton5" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView7"
+        android:background="@drawable/back_21"
+        android:onClick="backak47"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

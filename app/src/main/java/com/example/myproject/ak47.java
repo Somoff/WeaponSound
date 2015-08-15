@@ -4,12 +4,15 @@ import android.app.Activity;
 import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.logging.Handler;
+import java.util.logging.LogRecord;
 
 import android.content.Context;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
+import android.os.Message;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -20,13 +23,18 @@ import android.widget.TextView;
 
 public class ak47 extends  Allmusicgun implements View.OnTouchListener {
     Timer timer;
+    View mDecorView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         ImageButton something = (ImageButton) findViewById(R.id.btnBass1);
         something.setOnTouchListener(this);
+        mDecorView = getWindow().getDecorView();
+        setTitle("FullScreen");
+
+
+
 
     }
     //   public void Play(View v) { //Клик на выстрел
@@ -37,6 +45,24 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
     //   }else { OurSoundPlayer.playSound(this, OurSoundPlayer.S2,0);
     //    }
     // }
+
+
+
+
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus)
+
+            mDecorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+
+        }
 
 
     public void Reweapon(View v) {//Перезарядка
@@ -66,10 +92,7 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
         overridePendingTransition(R.anim.twotoone, R.anim.twotoonee);
     }
 
-    public void onClick11(View v) {
-        startActivity(new Intent(this,
-                Testactivity.class));
-    }
+
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {

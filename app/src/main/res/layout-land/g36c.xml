@@ -12,34 +12,6 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Назад"
-        android:id="@+id/button16"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="47dp"
-        android:onClick="backg36c" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Далее"
-        android:id="@+id/button17"
-        android:layout_alignBottom="@+id/button16"
-        android:layout_alignParentEnd="true"
-        android:onClick="g36cgo" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Перезарядка"
-        android:id="@+id/button18"
-        android:layout_alignTop="@+id/button17"
-        android:layout_centerHorizontal="true"
-        android:onClick="Reweapon8" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,6 +19,69 @@
         android:text="Medium Text"
         android:id="@+id/g36ctextView"
         android:layout_alignBottom="@+id/g36cView"
-        android:layout_alignStart="@+id/g36cView"
-        android:layout_marginBottom="41dp" />
+        android:layout_alignStart="@+id/g36cView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView8"
+        android:background="@drawable/back_21"
+        android:onClick="backg36c"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton6"
+        android:background="@drawable/next_21"
+        android:onClick="g36cgo"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton9"
+        android:background="@drawable/reload"
+        android:onClick="Reweapon7"
+        android:layout_below="@+id/g36ctextView"
+        android:layout_alignStart="@+id/imageButton6"
+        android:layout_marginTop="27dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/like"
+        android:id="@+id/imageLike"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="13dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageInfo"
+        android:background="@drawable/info"
+        android:layout_alignTop="@+id/imageLike"
+        android:layout_toEndOf="@+id/imageLike" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gmail_spinner"
+        android:id="@+id/imageEmail"
+        android:layout_alignTop="@+id/imageInfo"
+        android:layout_toEndOf="@+id/imageInfo" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/share"
+        android:id="@+id/imageShare"
+        android:layout_alignBottom="@+id/imageEmail"
+        android:layout_toEndOf="@+id/imageEmail" />
+
+
 </RelativeLayout>

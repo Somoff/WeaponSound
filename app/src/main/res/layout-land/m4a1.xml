@@ -14,35 +14,6 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:onClick="Play3" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Назад"
-        android:id="@+id/button3"
-        android:onClick="backm4a1"
-        android:layout_marginTop="30dp"
-        android:layout_below="@+id/imageView2"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="31dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Далее"
-        android:id="@+id/button4"
-        android:layout_alignBottom="@+id/button3"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="37dp"
-        android:onClick="m4a1go" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Перезарядка"
-        android:id="@+id/button9"
-        android:layout_alignBottom="@+id/button4"
-        android:layout_centerHorizontal="true"
-        android:onClick="Reweapon3" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -52,4 +23,68 @@
         android:id="@+id/textView222"
         android:layout_alignBottom="@+id/imageView2"
         android:layout_alignStart="@+id/imageView2" />
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/like"
+        android:id="@+id/imageLike"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="13dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageInfo"
+        android:background="@drawable/info"
+        android:layout_alignTop="@+id/imageLike"
+        android:layout_toEndOf="@+id/imageLike" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gmail_spinner"
+        android:id="@+id/imageEmail"
+        android:layout_alignTop="@+id/imageInfo"
+        android:layout_toEndOf="@+id/imageInfo" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/share"
+        android:id="@+id/imageShare"
+        android:layout_alignBottom="@+id/imageEmail"
+        android:layout_toEndOf="@+id/imageEmail" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView9"
+        android:background="@drawable/back_21"
+        android:onClick="backm4a1"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton17"
+        android:background="@drawable/next_21"
+        android:onClick="m4a1go"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton18"
+        android:background="@drawable/reload"
+        android:onClick="Reweapon7"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/textView222"
+        android:layout_alignStart="@+id/imageButton17" />
+
 </RelativeLayout>
