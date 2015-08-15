@@ -2,18 +2,37 @@
     package="com.example.myproject">
 
     <application android:allowBackup="true"
-
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
         android:icon="@mipmap/ic_launcher">
-<activity android:name=".Start"
-    android:screenOrientation="landscape">//ОРИЕНТАЦИЯ!!
-    <intent-filter>
-        <action android:name="android.intent.action.MAIN"/>
-        <category android:name="android.intent.category.LAUNCHER"/>
+        <activity android:name=".Start"
+            android:screenOrientation="landscape">//ОРИЕНТАЦИЯ!!
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
 
-    </intent-filter>
-</activity>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ak47"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".ak74"
+            android:screenOrientation="landscape" />
+        <activity android:name=".aug_activity"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".m4a1"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".Allmusicgun"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".SpinnerWeapon"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".Famas"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".fs2000"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".g36c"
+            android:screenOrientation="landscape"/>
+
 
     </application>
-
 
 </manifest>
