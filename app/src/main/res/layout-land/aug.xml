@@ -11,9 +11,8 @@ android:background="@drawable/bacckgrond"
         android:id="@+id/imageView64"
         android:background="@drawable/assaultrifle_aug"
         android:onClick="Play1"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp" />
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -53,5 +52,39 @@ android:background="@drawable/bacckgrond"
         android:layout_centerVertical="true"
         android:layout_alignStart="@+id/button3"
         android:layout_marginStart="39dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/like"
+        android:id="@+id/imageLike"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="13dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageInfo"
+        android:background="@drawable/info"
+        android:layout_alignTop="@+id/imageLike"
+        android:layout_toEndOf="@+id/imageLike" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gmail_spinner"
+        android:id="@+id/imageEmail"
+        android:layout_alignTop="@+id/imageInfo"
+        android:layout_toEndOf="@+id/imageInfo" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/share"
+        android:id="@+id/imageShare"
+        android:layout_alignBottom="@+id/imageEmail"
+        android:layout_toEndOf="@+id/imageEmail" />
 
 </RelativeLayout>

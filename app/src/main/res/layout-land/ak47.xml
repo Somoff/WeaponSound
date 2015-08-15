@@ -6,19 +6,6 @@
     android:layout_height="fill_parent">
 
 
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Далее"
-        android:onClick="Ak47go"
-        android:id="@+id/button"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="39dp"
-        android:layout_marginBottom="28dp" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,27 +13,8 @@
         android:text="Medium Text"
         android:onClick="setPatronText"
         android:id="@+id/txtnumber"
-        android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/button2" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Перезарядка"
-        android:id="@+id/button2"
-        android:onClick="Reweapon"
-        android:layout_alignTop="@+id/button"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Назад"
-        android:onClick="backak47"
-        android:id="@+id/button5"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="26dp" />
+        android:layout_alignBottom="@+id/btnBass1"
+        android:layout_alignStart="@+id/btnBass1" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -54,7 +22,70 @@
         android:id="@+id/btnBass1"
         android:background="@drawable/assaultrifle_ak47"
         android:onClick="Play"
+        android:layout_below="@+id/imageEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="84dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/like"
+        android:id="@+id/imageLike"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="13dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageInfo"
+        android:background="@drawable/info"
+        android:layout_alignTop="@+id/imageLike"
+        android:layout_toEndOf="@+id/imageLike" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gmail_spinner"
+        android:id="@+id/imageEmail"
+        android:layout_alignTop="@+id/imageInfo"
+        android:layout_toEndOf="@+id/imageInfo" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/share"
+        android:id="@+id/imageShare"
+        android:layout_alignBottom="@+id/imageEmail"
+        android:layout_toEndOf="@+id/imageEmail" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton5"
+        android:background="@drawable/next_21"
+        android:onClick="Ak47go"
         android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/button" />
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton6"
+        android:background="@drawable/back_21"
+        android:onClick="backak47"
+        android:layout_above="@+id/txtnumber"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="4dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton7"
+        android:background="@drawable/reload"
+        android:onClick="Reweapon"
+        android:layout_below="@+id/btnBass1"
+        android:layout_alignStart="@+id/imageButton5" />
 
 </RelativeLayout>
