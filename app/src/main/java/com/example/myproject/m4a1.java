@@ -50,7 +50,7 @@ Timer timer4;
     }
 
     public void backm4a1(View view) {
-        Intent intent = new Intent(getApplicationContext(), ak74.class);
+        Intent intent = new Intent(getApplicationContext(), g36c.class);
         startActivity(intent);
         overridePendingTransition(R.anim.twotoone, R.anim.twotoonee);
     }
@@ -64,7 +64,7 @@ Timer timer4;
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
             if (timer4 == null) {
                 timer4 = new Timer();
-                timer4.scheduleAtFixedRate(new UpdateTimeTask4(), 50, 250);
+                timer4.scheduleAtFixedRate(new UpdateTimeTask4(), 50, 210);
             }
         } else if (event.getAction() == MotionEvent.ACTION_UP) {
             timer4.cancel();

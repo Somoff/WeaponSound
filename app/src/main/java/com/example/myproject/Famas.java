@@ -47,7 +47,7 @@ public class Famas extends  Allmusicgun implements View.OnTouchListener {
         } else if (event.getAction() == MotionEvent.ACTION_UP ) {
             timer5.cancel();
             timer5 = null;
-        }if (patron == 0)
+        }if (patron2 == 0)
             Allmusicgun.OurSoundPlayer.playSound(getApplicationContext(), Allmusicgun.OurSoundPlayer.S2, 0);
         return true;
     }

@@ -71,7 +71,7 @@ public class fs2000 extends Allmusicgun implements View.OnTouchListener {
 
     }
     public void Fs2000go(View view) {
-        Intent intent = new Intent(this, m4a1.class);
+        Intent intent = new Intent(this, g36c.class);
         startActivity(intent);
         overridePendingTransition(R.anim.onetotwo, R.anim.onetwoo);
 

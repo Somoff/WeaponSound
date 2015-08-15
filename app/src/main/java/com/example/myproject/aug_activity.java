@@ -51,13 +51,13 @@ public class aug_activity extends Allmusicgun implements View.OnTouchListener {
 
 
     public void backaug(View view) {
-        Intent intent = new Intent(getApplicationContext(), ak47.class);
+        Intent intent = new Intent(getApplicationContext(), ak74.class);
         startActivity(intent);
         overridePendingTransition(R.anim.twotoone, R.anim.twotoonee);
     }
 
     public void goaug(View view) {
-        Intent intent = new Intent(getApplicationContext(), ak74.class);
+        Intent intent = new Intent(getApplicationContext(), Famas.class);
         startActivity(intent);
         overridePendingTransition(R.anim.onetotwo, R.anim.onetwoo);
     }
@@ -67,7 +67,7 @@ public class aug_activity extends Allmusicgun implements View.OnTouchListener {
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
             if (timer3 == null) {
                 timer3 = new Timer();
-                timer3.scheduleAtFixedRate(new UpdateTimeTask3(), 50, 250);
+                timer3.scheduleAtFixedRate(new UpdateTimeTask3(), 50, 210);
             }
         } else if (event.getAction() == MotionEvent.ACTION_UP) {
             timer3.cancel();

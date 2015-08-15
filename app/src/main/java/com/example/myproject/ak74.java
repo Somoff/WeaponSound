@@ -51,13 +51,13 @@ public class ak74 extends Allmusicgun implements View.OnTouchListener {
 
 
     public void backak74(View view) {
-        Intent intent = new Intent(getApplicationContext(), aug_activity.class);
+        Intent intent = new Intent(getApplicationContext(), ak47.class);
         startActivity(intent);
         overridePendingTransition(R.anim.twotoone, R.anim.twotoonee);
     }
 
     public void Ak74go(View view) {
-        Intent intent = new Intent(this, m4a1.class);
+        Intent intent = new Intent(this, aug_activity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.onetotwo, R.anim.onetwoo);
     }
@@ -67,7 +67,7 @@ public class ak74 extends Allmusicgun implements View.OnTouchListener {
         if (event.getAction() == MotionEvent.ACTION_DOWN ) {
             if (timer2 == null ) {
                 timer2 = new Timer();
-                timer2.scheduleAtFixedRate(new UpdateTimeTask2(), 50, 250);}
+                timer2.scheduleAtFixedRate(new UpdateTimeTask2(), 50, 210);}
         } else if (event.getAction() == MotionEvent.ACTION_UP ) {
             timer2.cancel();
             timer2 = null;

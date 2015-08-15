@@ -54,7 +54,7 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
 
 
     public void Ak47go(View view) {
-        Intent intent = new Intent(ak47.this, aug_activity.class);
+        Intent intent = new Intent(ak47.this, ak74.class);
         startActivity(intent);
         overridePendingTransition(R.anim.onetotwo, R.anim.onetwoo);
 
@@ -76,7 +76,7 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
             if (event.getAction() == MotionEvent.ACTION_DOWN ) {
                 if (timer == null ) {
                 timer = new Timer();
-                timer.scheduleAtFixedRate(new UpdateTimeTask(), 50, 300);}
+                timer.scheduleAtFixedRate(new UpdateTimeTask(), 50, 210);}
                 } else if (event.getAction() == MotionEvent.ACTION_UP ) {
             timer.cancel();
             timer = null;
