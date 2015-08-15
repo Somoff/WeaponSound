@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/bacckgrond"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fs2000View"
+        android:background="@drawable/assaultrifle_fs2000"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Назад"
+        android:id="@+id/button13"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="45dp"
+        android:onClick="backfs2000" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Далее"
+        android:id="@+id/button14"
+        android:layout_alignTop="@+id/button13"
+        android:layout_alignParentEnd="true"
+        android:onClick="Fs2000go" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Перезарядка"
+        android:id="@+id/button15"
+        android:layout_alignBottom="@+id/button14"
+        android:layout_centerHorizontal="true"
+        android:onClick="Reweapon7" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/fss2000View"
+        android:layout_alignBottom="@+id/fs2000View"
+        android:layout_alignStart="@+id/fs2000View" />
+</RelativeLayout>

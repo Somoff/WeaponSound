@@ -40,6 +40,8 @@ public class Allmusicgun extends Activity {
         public static final int S7 = R.raw.aug_fire;
         public static final int S8 = R.raw.reloadm4a1;
         public static final int S9 = R.raw.m4a1_fire;
+        public static final int S10 = R.raw.famasf1_fire;
+        public static final int S12 = R.raw.mg42_fire;
 
         public static SoundPool soundPool;
         public static HashMap<Integer, Integer> soundPoolMap;
@@ -57,6 +59,8 @@ public class Allmusicgun extends Activity {
             soundPoolMap.put(S7, soundPool.load(context, R.raw.aug_fire,1));
             soundPoolMap.put(S8, soundPool.load(context, R.raw.reloadm4a1,1));
             soundPoolMap.put(S9, soundPool.load(context, R.raw.m4a1_fire,1));
+            soundPoolMap.put(S10, soundPool.load(context, R.raw.famasf1_fire,1));
+            soundPoolMap.put(S12, soundPool.load(context, R.raw.mg42_fire,1));
 
         }
         /** Play a given sound in the soundPool */
@@ -76,7 +80,23 @@ public class Allmusicgun extends Activity {
             }
         }
 
+        public static void StopSound(Context context, int soundID,int st) {
+            if(soundPool == null || soundPoolMap == null){
+                initSounds(context);
+            }
+            if(st==1){ soundPool.stop(soundPoolMap.get(soundID));
+            } else {
+                float volume = 0;// whatever in the range = 0.0 to 1.0
+
+                // play sound with same right and left volume, with a priority of 1,
+                // zero repeats (i.e play once), and a play back rate of 1f
+                soundPool.play(soundPoolMap.get(soundID), volume, volume, 1, 0, 1f);
+                st=0;
+
+            }
+        }
+        }
     }
 
 
-}
+
