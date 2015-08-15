@@ -49,9 +49,7 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
         }
 
     }
-    public void setPatronText(String text) {
-        patron1.setText(text);
-    }
+
 
 
     public void Ak47go(View view) {
@@ -72,46 +70,38 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
                 Testactivity.class));
     }
 
-    /**
-     * Called when a touch event is dispatched to a view. This allows listeners to
-     * get a chance to respond before the target view.
-     *
-     * @param v     The view the touch event has been dispatched to.
-     * @param event The MotionEvent object containing full information about
-     *              the event.
-     * @return True if the listener has consumed the event, false otherwise.
-     */
     @Override
     public boolean onTouch(View v, MotionEvent event) {
             if (event.getAction() == MotionEvent.ACTION_DOWN ) {
                 if (timer == null ) {
                 timer = new Timer();
-                timer.scheduleAtFixedRate(new UpdateTimeTask(), 1000, 1000);}}
-        else if (event.getAction() == MotionEvent.ACTION_UP ) {
+                timer.scheduleAtFixedRate(new UpdateTimeTask(), 1000, 300);}
+                } else if (event.getAction() == MotionEvent.ACTION_UP ) {
             timer.cancel();
             timer = null;
-        }
-
-
-            if (patron == 0)
+        }if (patron == 0)
                 Allmusicgun.OurSoundPlayer.playSound(getApplicationContext(), Allmusicgun.OurSoundPlayer.S2, 0);
-   //     }
-
         return true;
     }
-
     class UpdateTimeTask extends TimerTask {
-
         @Override
         public void run() {
-            if ((patron <= 30) && (patron > 0)) {
-                Allmusicgun.OurSoundPlayer.playSound(getApplicationContext(), Allmusicgun.OurSoundPlayer.S1, 0);
-                patron = patron - 1;
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    if ((patron <= 30) && (patron > 0)) {
+                        Allmusicgun.OurSoundPlayer.playSound(getApplicationContext(), Allmusicgun.OurSoundPlayer.S1, 0);
+                        patron = patron - 1;
+                        patron1.setText(String.valueOf(patron));
+                }
             }
 
-
-
+          });
         }
+
+}
+    public void setPatronText(String text) {
+        patron1.setText(text);
     }
 }
 
