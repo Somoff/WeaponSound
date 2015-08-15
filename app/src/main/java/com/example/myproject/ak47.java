@@ -27,6 +27,7 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
 
         ImageButton something = (ImageButton) findViewById(R.id.btnBass1);
         something.setOnTouchListener(this);
+
     }
     //   public void Play(View v) { //Клик на выстрел
     //     if ((patron <=30) && (patron > 0)){
@@ -75,7 +76,7 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
             if (event.getAction() == MotionEvent.ACTION_DOWN ) {
                 if (timer == null ) {
                 timer = new Timer();
-                timer.scheduleAtFixedRate(new UpdateTimeTask(), 1000, 300);}
+                timer.scheduleAtFixedRate(new UpdateTimeTask(), 50, 300);}
                 } else if (event.getAction() == MotionEvent.ACTION_UP ) {
             timer.cancel();
             timer = null;
@@ -93,10 +94,10 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
                         Allmusicgun.OurSoundPlayer.playSound(getApplicationContext(), Allmusicgun.OurSoundPlayer.S1, 0);
                         patron = patron - 1;
                         patron1.setText(String.valueOf(patron));
+                    }
                 }
-            }
 
-          });
+            });
         }
 
 }
