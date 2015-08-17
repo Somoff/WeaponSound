@@ -1,41 +1,30 @@
 package com.example.myproject;
 
-import android.app.Activity;
-import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.logging.Handler;
-import java.util.logging.LogRecord;
 
-import android.content.Context;
 import android.content.Intent;
-import android.media.AudioManager;
-import android.media.SoundPool;
 import android.os.Bundle;
-import android.os.Message;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class ak47 extends  Allmusicgun implements View.OnTouchListener {
     Timer timer;
     View mDecorView;
-    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C"};
+    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C","SG552","SHOTGUN_SUPER90"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ImageButton something = (ImageButton) findViewById(R.id.btnBass1);
+        ImageButton something = (ImageButton) findViewById(R.id.sg552button);
         something.setOnTouchListener(this);
         mDecorView = getWindow().getDecorView();
         setTitle("FullScreen");
+
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -90,6 +79,16 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
                     Intent g36c = new Intent(getApplicationContext(), g36c.class);
                     startActivity(g36c);
                 }
+                if (position == 7) {
+                    Toast.makeText(ak47.this, "Weapon Selected SG552", Toast.LENGTH_SHORT).show();
+                    Intent sg552 = new Intent(getApplicationContext(), sg552.class);
+                    startActivity(sg552);
+                }
+            if (position == 8) {
+                Toast.makeText(ak47.this, "SHOTGUN_SUPER90", Toast.LENGTH_SHORT).show();
+                Intent SHOTGUN_SUPER90 = new Intent(getApplicationContext(), shotgun_super90.class);
+                startActivity(SHOTGUN_SUPER90);
+            }
             }
 
 
@@ -153,7 +152,7 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
     }
 
     public void backak47(View view) {
-        Intent intent = new Intent(getApplicationContext(), m4a1.class);
+        Intent intent = new Intent(getApplicationContext(), shotgun_super90.class);
         startActivity(intent);
         overridePendingTransition(R.anim.twotoone, R.anim.twotoonee);
     }
@@ -165,7 +164,7 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
             if (event.getAction() == MotionEvent.ACTION_DOWN ) {
                 if (timer == null ) {
                 timer = new Timer();
-                timer.scheduleAtFixedRate(new UpdateTimeTask(), 50, 210);}
+                timer.scheduleAtFixedRate(new UpdateTimeTask(), 0, 150);}
                 } else if (event.getAction() == MotionEvent.ACTION_UP ) {
             timer.cancel();
             timer = null;
@@ -176,6 +175,7 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
     class UpdateTimeTask extends TimerTask {
         @Override
         public void run() {
+
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {

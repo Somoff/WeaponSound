@@ -1,9 +1,7 @@
 package com.example.myproject;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Context;
-import android.content.Intent;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
@@ -29,7 +27,7 @@ public class Allmusicgun extends Activity {
         setContentView(R.layout.ak47);
         patron1 = (TextView) findViewById(R.id.txtnumber);
         patron1.setText(String.valueOf(patron));
-        ImageView image = (ImageView) findViewById(R.id.btnBass1);
+        ImageView image = (ImageView) findViewById(R.id.sg552button);
 
         mDecorView = getWindow().getDecorView();
         setTitle("FullScreen");
@@ -68,6 +66,9 @@ public class Allmusicgun extends Activity {
         public static final int S10 = R.raw.famasf1_fire;
         public static final int S12 = R.raw.mg42_fire;
         public static final int S13 = R.raw.g36c_fire;
+        public static final int S14 = R.raw.sg552_fire;
+        public static final int S15 = R.raw.xm1014;
+        public static final int S16 = R.raw.xmdeploy;
 
         public static SoundPool soundPool;
         public static HashMap<Integer, Integer> soundPoolMap;
@@ -88,7 +89,9 @@ public class Allmusicgun extends Activity {
             soundPoolMap.put(S10, soundPool.load(context, R.raw.famasf1_fire,1));
             soundPoolMap.put(S12, soundPool.load(context, R.raw.mg42_fire,1));
             soundPoolMap.put(S13, soundPool.load(context, R.raw.g36c_fire,1));
-
+            soundPoolMap.put(S14, soundPool.load(context, R.raw.sg552_fire,1));
+            soundPoolMap.put(S15, soundPool.load(context, R.raw.xm1014,1));
+            soundPoolMap.put(S16, soundPool.load(context, R.raw.xmdeploy,1));
         }
         /** Play a given sound in the soundPool */
         public static void playSound(Context context, int soundID, int st) {

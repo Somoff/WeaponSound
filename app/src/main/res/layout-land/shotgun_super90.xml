@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/bacckgrond_32"
+    android:layout_height="match_parent">
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shotgunButton"
+            android:background="@drawable/shotgun_benelli_m3_super90"
+            android:layout_alignBottom="@+id/imageView5"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/shotgunView"
+            android:layout_alignBottom="@+id/shotgunButton"
+            android:layout_alignStart="@+id/shotgunButton" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView5"
+            android:background="@drawable/back_21"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:onClick="backshotgun" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton15"
+            android:background="@drawable/next_21"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="Shotgungo" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton16"
+            android:background="@drawable/reload"
+            android:layout_below="@+id/shotgunView"
+            android:layout_alignStart="@+id/imageButton15"
+            android:layout_marginTop="27dp"
+            android:onClick="Reweapon9" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/like"
+            android:id="@+id/imageLike"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="13dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageInfo"
+            android:background="@drawable/info"
+            android:layout_alignTop="@+id/imageLike"
+            android:layout_toEndOf="@+id/imageLike" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gmail_spinner"
+            android:id="@+id/imageEmail"
+            android:layout_alignTop="@+id/imageInfo"
+            android:layout_toEndOf="@+id/imageInfo" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/share"
+            android:id="@+id/imageShare"
+            android:layout_alignBottom="@+id/imageEmail"
+            android:layout_toEndOf="@+id/imageEmail" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinneshotgun"
+            android:layout_alignTop="@+id/imageShare"
+            android:layout_alignEnd="@+id/imageButton16"
+            android:layout_toEndOf="@+id/imageShare" />
+
+    </RelativeLayout>
+
+
+

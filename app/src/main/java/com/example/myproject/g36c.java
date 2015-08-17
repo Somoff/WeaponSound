@@ -16,7 +16,7 @@ import java.util.TimerTask;
 
 public class g36c extends Allmusicgun implements View.OnTouchListener {
     Timer timer;
-    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C"};
+    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C","SG552","SHOTGUN_SUPER90"};
     public int patron3 = 20;
 
     @Override
@@ -81,6 +81,16 @@ public class g36c extends Allmusicgun implements View.OnTouchListener {
                     Intent g36c = new Intent(getApplicationContext(), g36c.class);
                     startActivity(g36c);
                 }
+                if (position == 7) {
+                    Toast.makeText(g36c.this, "Weapon Selected SG552", Toast.LENGTH_SHORT).show();
+                    Intent sg552 = new Intent(getApplicationContext(), sg552.class);
+                    startActivity(sg552);
+                }
+                if (position == 8) {
+                    Toast.makeText(g36c.this, "SHOTGUN_SUPER90", Toast.LENGTH_SHORT).show();
+                    Intent SHOTGUN_SUPER90 = new Intent(getApplicationContext(), shotgun_super90.class);
+                    startActivity(SHOTGUN_SUPER90);
+                }
             }
 
 
@@ -110,7 +120,7 @@ public class g36c extends Allmusicgun implements View.OnTouchListener {
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
             if (timer == null) {
                 timer = new Timer();
-                timer.scheduleAtFixedRate(new UpdateTimeTask5(), 50, 250);
+                timer.scheduleAtFixedRate(new UpdateTimeTask5(), 50, 300);
             }
         } else if (event.getAction() == MotionEvent.ACTION_UP) {
             timer.cancel();

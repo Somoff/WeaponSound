@@ -17,7 +17,7 @@ import java.util.TimerTask;
 
 public class fs2000 extends Allmusicgun implements View.OnTouchListener {
     Timer timer;
-    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C"};
+    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C","SHOTGUN_SUPER90"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class fs2000 extends Allmusicgun implements View.OnTouchListener {
         setContentView(R.layout.fs2000);
         patron1 = (TextView) findViewById(R.id.fss2000View);
         patron1.setText(String.valueOf(patron));
-        ImageView something = (ImageView) findViewById(R.id.fs2000View);
+        ImageView something = (ImageView) findViewById(R.id.shotgunButton);
         something.setOnTouchListener(this);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data);
@@ -80,6 +80,16 @@ public class fs2000 extends Allmusicgun implements View.OnTouchListener {
                     Toast.makeText(fs2000.this, "Weapon Selected G36C", Toast.LENGTH_SHORT).show();
                     Intent g36c = new Intent(getApplicationContext(), g36c.class);
                     startActivity(g36c);
+                }
+                if (position == 7) {
+                    Toast.makeText(fs2000.this, "Weapon Selected SG552", Toast.LENGTH_SHORT).show();
+                    Intent sg552 = new Intent(getApplicationContext(), sg552.class);
+                    startActivity(sg552);
+                }
+                if (position == 8) {
+                    Toast.makeText(fs2000.this, "SHOTGUN_SUPER90", Toast.LENGTH_SHORT).show();
+                    Intent SHOTGUN_SUPER90 = new Intent(getApplicationContext(), shotgun_super90.class);
+                    startActivity(SHOTGUN_SUPER90);
                 }
             }
 

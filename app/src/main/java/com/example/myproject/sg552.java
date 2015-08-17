@@ -19,7 +19,7 @@ import java.util.TimerTask;
  */
 public class sg552 extends Allmusicgun implements View.OnTouchListener {
     Timer timer;
-    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C", "SG552"};
+    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C", "SG552","SHOTGUN_SUPER90"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,6 +87,11 @@ public class sg552 extends Allmusicgun implements View.OnTouchListener {
                     Intent sg552 = new Intent(getApplicationContext(), sg552.class);
                     startActivity(sg552);
                 }
+                if (position == 8) {
+                    Toast.makeText(sg552.this, "SHOTGUN_SUPER90", Toast.LENGTH_SHORT).show();
+                    Intent SHOTGUN_SUPER90 = new Intent(getApplicationContext(), shotgun_super90.class);
+                    startActivity(SHOTGUN_SUPER90);
+                }
             }
 
 
@@ -149,7 +154,7 @@ public class sg552 extends Allmusicgun implements View.OnTouchListener {
     }
 
     public void sg552go(View view) {
-        Intent intent = new Intent(this, ak47.class);
+        Intent intent = new Intent(this, shotgun_super90.class);
         startActivity(intent);
         overridePendingTransition(R.anim.onetotwo, R.anim.onetwoo);
     }

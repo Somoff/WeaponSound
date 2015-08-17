@@ -18,7 +18,7 @@ import java.util.TimerTask;
 public class aug_activity extends Allmusicgun implements View.OnTouchListener {
     Timer timer3;
 
-    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C"};
+    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C","SG552","SHOTGUN_SUPER90"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +82,16 @@ public class aug_activity extends Allmusicgun implements View.OnTouchListener {
                     Toast.makeText(aug_activity.this, "Weapon Selected G36C", Toast.LENGTH_SHORT).show();
                     Intent g36c = new Intent(getApplicationContext(), g36c.class);
                     startActivity(g36c);
+                }
+                if (position == 7) {
+                    Toast.makeText(aug_activity.this, "Weapon Selected SG552", Toast.LENGTH_SHORT).show();
+                    Intent sg552 = new Intent(getApplicationContext(), sg552.class);
+                    startActivity(sg552);
+                }
+                if (position == 8) {
+                    Toast.makeText(aug_activity.this, "SHOTGUN_SUPER90", Toast.LENGTH_SHORT).show();
+                    Intent SHOTGUN_SUPER90 = new Intent(getApplicationContext(), shotgun_super90.class);
+                    startActivity(SHOTGUN_SUPER90);
                 }
             }
 

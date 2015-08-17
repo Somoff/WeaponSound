@@ -21,7 +21,7 @@ public class m4a1 extends Allmusicgun implements View.OnTouchListener {
 Timer timer4;
 
 
-    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C"};
+    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C", "SG552","SHOTGUN_SUPER90"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,6 +84,16 @@ Timer timer4;
                     Intent g36c = new Intent(getApplicationContext(), g36c.class);
                     startActivity(g36c);
                 }
+                if (position == 7) {
+                    Toast.makeText(m4a1.this, "Weapon Selected SG552", Toast.LENGTH_SHORT).show();
+                    Intent sg552 = new Intent(getApplicationContext(), sg552.class);
+                    startActivity(sg552);
+                }
+                if (position == 8) {
+                    Toast.makeText(m4a1.this, "SHOTGUN_SUPER90", Toast.LENGTH_SHORT).show();
+                    Intent SHOTGUN_SUPER90 = new Intent(getApplicationContext(), shotgun_super90.class);
+                    startActivity(SHOTGUN_SUPER90);
+                }
             }
 
 
@@ -124,7 +134,7 @@ Timer timer4;
         overridePendingTransition(R.anim.twotoone, R.anim.twotoonee);
     }
     public void m4a1go(View view) {
-        Intent intent = new Intent(this, ak47.class);
+        Intent intent = new Intent(this, sg552.class);
         startActivity(intent);
         overridePendingTransition(R.anim.onetotwo, R.anim.onetwoo);
     }
