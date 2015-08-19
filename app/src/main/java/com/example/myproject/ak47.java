@@ -14,13 +14,14 @@ import android.widget.Toast;
 
 public class ak47 extends  Allmusicgun implements View.OnTouchListener {
     Timer timer;
+
     View mDecorView;
-    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C","SG552","SHOTGUN_SUPER90"};
+    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C", "SG552", "SHOTGUN_SUPER90","DESERTEAGLE"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ImageButton something = (ImageButton) findViewById(R.id.sg552button);
+        ImageButton something = (ImageButton) findViewById(R.id.Desertbutton);
         something.setOnTouchListener(this);
         mDecorView = getWindow().getDecorView();
         setTitle("FullScreen");
@@ -30,7 +31,7 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
 
-        android.widget.Spinner spinner = (android.widget.Spinner) findViewById(R.id.spinner47);
+        android.widget.Spinner spinner = (android.widget.Spinner) findViewById(R.id.spinner4766);
         spinner.setAdapter(adapter);
 
         spinner.setSelection(0, true);
@@ -84,11 +85,16 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
                     Intent sg552 = new Intent(getApplicationContext(), sg552.class);
                     startActivity(sg552);
                 }
-            if (position == 8) {
-                Toast.makeText(ak47.this, "SHOTGUN_SUPER90", Toast.LENGTH_SHORT).show();
-                Intent SHOTGUN_SUPER90 = new Intent(getApplicationContext(), shotgun_super90.class);
-                startActivity(SHOTGUN_SUPER90);
-            }
+                if (position == 8) {
+                    Toast.makeText(ak47.this, "SHOTGUN_SUPER90", Toast.LENGTH_SHORT).show();
+                    Intent SHOTGUN_SUPER90 = new Intent(getApplicationContext(), shotgun_super90.class);
+                    startActivity(SHOTGUN_SUPER90);
+                }
+                if (position == 9) {
+                    Toast.makeText(ak47.this, "Weapon Selected DESERTEAGLE", Toast.LENGTH_SHORT).show();
+                    Intent SHOTGUN_SUPER90 = new Intent(getApplicationContext(), Deserteagl.class);
+                    startActivity(SHOTGUN_SUPER90);
+                }
             }
 
 
@@ -99,20 +105,6 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
         });
 
     }
-
-
-
-    //   public void Play(View v) { //Клик на выстрел
-    //     if ((patron <=30) && (patron > 0)){
-    //        OurSoundPlayer.playSound(this, OurSoundPlayer.S1, 0);
-    //        patron = patron - 1;
-    //       patron1.setText(String.valueOf(patron));
-    //   }else { OurSoundPlayer.playSound(this, OurSoundPlayer.S2,0);
-    //    }
-    // }
-
-
-
 
 
     @Override
@@ -127,11 +119,11 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
                     | View.SYSTEM_UI_FLAG_FULLSCREEN
                     | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
 
-        }
+    }
 
 
     public void Reweapon(View v) {//Перезарядка
-        OurSoundPlayer.playSound(this, OurSoundPlayer.S3, 0);
+       playSound(reload);
         patron = 30;
         patron1.setText(String.valueOf(patron));
         try {
@@ -143,7 +135,6 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
     }
 
 
-
     public void Ak47go(View view) {
         Intent intent = new Intent(ak47.this, ak74.class);
         startActivity(intent);
@@ -152,26 +143,28 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
     }
 
     public void backak47(View view) {
-        Intent intent = new Intent(getApplicationContext(), shotgun_super90.class);
+        Intent intent = new Intent(getApplicationContext(), Deserteagl.class);
         startActivity(intent);
         overridePendingTransition(R.anim.twotoone, R.anim.twotoonee);
     }
 
 
-
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-            if (event.getAction() == MotionEvent.ACTION_DOWN ) {
-                if (timer == null ) {
+        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+            if (timer == null) {
                 timer = new Timer();
-                timer.scheduleAtFixedRate(new UpdateTimeTask(), 0, 150);}
-                } else if (event.getAction() == MotionEvent.ACTION_UP ) {
+                timer.scheduleAtFixedRate(new UpdateTimeTask(), 0, 150);
+            }
+        } else if (event.getAction() == MotionEvent.ACTION_UP) {
             timer.cancel();
             timer = null;
-        }if (patron == 0)
-                Allmusicgun.OurSoundPlayer.playSound(getApplicationContext(), Allmusicgun.OurSoundPlayer.S2, 0);
+        }
+        if (patron == 0)
+            playSound(block);
         return true;
     }
+
     class UpdateTimeTask extends TimerTask {
         @Override
         public void run() {
@@ -180,7 +173,7 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
                 @Override
                 public void run() {
                     if ((patron <= 30) && (patron > 0)) {
-                        Allmusicgun.OurSoundPlayer.playSound(getApplicationContext(), Allmusicgun.OurSoundPlayer.S1, 0);
+                        playSound(ak47);
                         patron = patron - 1;
                         patron1.setText(String.valueOf(patron));
                     }
@@ -189,9 +182,6 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
             });
         }
 
-}
-    public void setPatronText(String text) {
-        patron1.setText(text);
     }
 }
 

@@ -9,9 +9,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
-public class SpinnerWeapon extends Activity{
+public class SpinnerWeapon extends Allmusicgun{
 
-    String[] data = {"ak47", "ak74", "AUG", "M16", "Start"};
+    String[] data = {"ak47", "ak74", "AUG", "M16", "Start", };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

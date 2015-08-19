@@ -21,7 +21,7 @@ public class m4a1 extends Allmusicgun implements View.OnTouchListener {
 Timer timer4;
 
 
-    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C", "SG552","SHOTGUN_SUPER90"};
+    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C", "SG552","SHOTGUN_SUPER90","DESERTEAGLE"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,6 +94,11 @@ Timer timer4;
                     Intent SHOTGUN_SUPER90 = new Intent(getApplicationContext(), shotgun_super90.class);
                     startActivity(SHOTGUN_SUPER90);
                 }
+                if (position == 9) {
+                    Toast.makeText(m4a1.this, "Weapon Selected DESERTEAGLE", Toast.LENGTH_SHORT).show();
+                    Intent SHOTGUN_SUPER90 = new Intent(getApplicationContext(), Deserteagl.class);
+                    startActivity(SHOTGUN_SUPER90);
+                }
             }
 
 
@@ -116,7 +121,7 @@ Timer timer4;
    // }
 
     public void Reweapon3(View v){//Перезарядка
-        Allmusicgun.OurSoundPlayer.playSound(this, Allmusicgun.OurSoundPlayer.S3, 0);
+        playSound(reload);
         patron=30;
         patron1.setText(String.valueOf(patron));
         try {
@@ -143,14 +148,14 @@ Timer timer4;
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
             if (timer4 == null) {
                 timer4 = new Timer();
-                timer4.scheduleAtFixedRate(new UpdateTimeTask4(), 50, 210);
+                timer4.scheduleAtFixedRate(new UpdateTimeTask4(), 50, 180);
             }
         } else if (event.getAction() == MotionEvent.ACTION_UP) {
             timer4.cancel();
             timer4 = null;
         }
         if (patron == 0)
-            Allmusicgun.OurSoundPlayer.playSound(getApplicationContext(), Allmusicgun.OurSoundPlayer.S2, 0);
+            playSound(block);
         return true;
     }
     class UpdateTimeTask4 extends TimerTask {
@@ -160,7 +165,7 @@ Timer timer4;
                 @Override
                 public void run() {
                     if ((patron <= 30) && (patron > 0)) {
-                        Allmusicgun.OurSoundPlayer.playSound(getApplicationContext(), Allmusicgun.OurSoundPlayer.S9, 0);
+                        playSound(m4a1);
                         patron = patron - 1;
                         patron1.setText(String.valueOf(patron));
                     }

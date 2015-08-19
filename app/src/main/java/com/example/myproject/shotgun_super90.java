@@ -19,7 +19,7 @@ import java.util.TimerTask;
 public class shotgun_super90 extends Allmusicgun implements View.OnTouchListener {
     Timer timer;
     int patron5 = 8;
-    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C", "SG552","SHOTGUN_SUPER90"};
+    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C", "SG552","SHOTGUN_SUPER90","DESERTEAGLE"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,6 +92,11 @@ public class shotgun_super90 extends Allmusicgun implements View.OnTouchListener
                         Intent SHOTGUN_SUPER90 = new Intent(getApplicationContext(), shotgun_super90.class);
                         startActivity(SHOTGUN_SUPER90);
                     }
+                    if (position == 9) {
+                        Toast.makeText(shotgun_super90.this, "Weapon Selected DESERTEAGLE", Toast.LENGTH_SHORT).show();
+                        Intent SHOTGUN_SUPER90 = new Intent(getApplicationContext(), Deserteagl.class);
+                        startActivity(SHOTGUN_SUPER90);
+                    }
                 }
 
 
@@ -115,7 +120,7 @@ public class shotgun_super90 extends Allmusicgun implements View.OnTouchListener
             timer = null;
         }
         if (patron5 == 0)
-            Allmusicgun.OurSoundPlayer.playSound(getApplicationContext(), Allmusicgun.OurSoundPlayer.S2, 0);
+            playSound(block);
         return true;
     }
     class UpdateTimeTask extends TimerTask {
@@ -125,7 +130,7 @@ public class shotgun_super90 extends Allmusicgun implements View.OnTouchListener
                 @Override
                 public void run() {
                     if ((patron5 <= 8) && (patron5 > 0)) {
-                        Allmusicgun.OurSoundPlayer.playSound(getApplicationContext(), Allmusicgun.OurSoundPlayer.S15, 0);
+                        playSound(shotgun_super90);
                         patron5 = patron5 - 1;
                         patron1.setText(String.valueOf(patron5));
                     }
@@ -136,18 +141,19 @@ public class shotgun_super90 extends Allmusicgun implements View.OnTouchListener
 
     }
     public void Reweapon9(View v) {//Перезарядка
-        OurSoundPlayer.playSound(this, OurSoundPlayer.S16, 0);
-        patron5 = 8;
+        playSound(reloadshotgun);
+        if (patron5<8)
+        patron5 = patron5+1;
         patron1.setText(String.valueOf(patron5));
         try {
-            Thread.sleep(1000);
+            Thread.sleep(300);
         } catch (InterruptedException ex) {
             Thread.currentThread().interrupt();
         }
 
     }
     public void Shotgungo(View view) {
-        Intent intent = new Intent(this, ak47.class);
+        Intent intent = new Intent(this, Deserteagl.class);
         startActivity(intent);
         overridePendingTransition(R.anim.onetotwo, R.anim.onetwoo);
 

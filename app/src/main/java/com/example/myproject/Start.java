@@ -14,6 +14,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -35,12 +36,24 @@ public class Start extends Activity {
 
         mDecorView = getWindow().getDecorView();
         setTitle("FullScreen");
+        final ImageButton b = (ImageButton) findViewById(R.id.imageButton4);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ak47.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.onetotwo, R.anim.onetwoo);
+            }
+        });
+
 
 
         // getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
 
     }
+
+
 
 
     @Override
@@ -97,11 +110,5 @@ public class Start extends Activity {
         alertDialog.show();
     }
 
-
-    public void Chooseweapon(View view){
-        Intent intent = new Intent(this, ak47.class);
-        startActivity(intent);
-        overridePendingTransition(R.anim.onetotwo, R.anim.onetwoo);
-    }
 
 }

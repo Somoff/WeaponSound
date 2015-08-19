@@ -17,7 +17,7 @@ import java.util.TimerTask;
 
 public class fs2000 extends Allmusicgun implements View.OnTouchListener {
     Timer timer;
-    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C","SHOTGUN_SUPER90"};
+    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C","SHOTGUN_SUPER90","DESERTEAGLE"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +91,11 @@ public class fs2000 extends Allmusicgun implements View.OnTouchListener {
                     Intent SHOTGUN_SUPER90 = new Intent(getApplicationContext(), shotgun_super90.class);
                     startActivity(SHOTGUN_SUPER90);
                 }
+                if (position == 9) {
+                    Toast.makeText(fs2000.this, "Weapon Selected DESERTEAGLE", Toast.LENGTH_SHORT).show();
+                    Intent SHOTGUN_SUPER90 = new Intent(getApplicationContext(), Deserteagl.class);
+                    startActivity(SHOTGUN_SUPER90);
+                }
             }
 
 
@@ -116,7 +121,7 @@ public class fs2000 extends Allmusicgun implements View.OnTouchListener {
             timer = null;
         }
         if (patron == 0)
-            Allmusicgun.OurSoundPlayer.playSound(getApplicationContext(), Allmusicgun.OurSoundPlayer.S2, 0);
+            playSound(block);
         return true;
     }
     class UpdateTimeTask extends TimerTask {
@@ -126,7 +131,7 @@ public class fs2000 extends Allmusicgun implements View.OnTouchListener {
                 @Override
                 public void run() {
                     if ((patron <= 30) && (patron > 0)) {
-                        Allmusicgun.OurSoundPlayer.playSound(getApplicationContext(), Allmusicgun.OurSoundPlayer.S12, 0);
+                        playSound(fs2000);
                         patron = patron - 1;
                         patron1.setText(String.valueOf(patron));
                     }
@@ -137,7 +142,7 @@ public class fs2000 extends Allmusicgun implements View.OnTouchListener {
 
     }
     public void Reweapon7(View v) {//Перезарядка
-        OurSoundPlayer.playSound(this, OurSoundPlayer.S3, 0);
+        playSound(reload);
         patron = 30;
         patron1.setText(String.valueOf(patron));
         try {

@@ -18,7 +18,7 @@ import java.util.TimerTask;
 public class Famas extends  Allmusicgun implements View.OnTouchListener {
     Timer timer5;
 
-    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C", "SG552","SHOTGUN_SUPER90"};
+    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C", "SG552","SHOTGUN_SUPER90","DESERTEAGLE"};
     public int patron2 = 25;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +93,11 @@ public class Famas extends  Allmusicgun implements View.OnTouchListener {
                     Intent SHOTGUN_SUPER90 = new Intent(getApplicationContext(), shotgun_super90.class);
                     startActivity(SHOTGUN_SUPER90);
                 }
+                if (position == 9) {
+                    Toast.makeText(Famas.this, "Weapon Selected DESERTEAGLE", Toast.LENGTH_SHORT).show();
+                    Intent SHOTGUN_SUPER90 = new Intent(getApplicationContext(), Deserteagl.class);
+                    startActivity(SHOTGUN_SUPER90);
+                }
             }
 
 
@@ -105,7 +110,7 @@ public class Famas extends  Allmusicgun implements View.OnTouchListener {
     }
 
     public void Reweapon6(View v){//Перезарядка
-        Allmusicgun.OurSoundPlayer.playSound(this, Allmusicgun.OurSoundPlayer.S3, 0);
+        playSound(reload);
         patron2=25;
         patron1.setText(String.valueOf(patron2));
         try {
@@ -121,12 +126,12 @@ public class Famas extends  Allmusicgun implements View.OnTouchListener {
         if (event.getAction() == MotionEvent.ACTION_DOWN ) {
             if (timer5 == null ) {
                 timer5 = new Timer();
-                timer5.scheduleAtFixedRate(new UpdateTimeTask5(), 50, 250);}
+                timer5.scheduleAtFixedRate(new UpdateTimeTask5(), 50, 200);}
         } else if (event.getAction() == MotionEvent.ACTION_UP ) {
             timer5.cancel();
             timer5 = null;
         }if (patron2 == 0)
-            Allmusicgun.OurSoundPlayer.playSound(getApplicationContext(), Allmusicgun.OurSoundPlayer.S2, 0);
+            playSound(block);
         return true;
     }
     class UpdateTimeTask5 extends TimerTask {
@@ -136,7 +141,7 @@ public class Famas extends  Allmusicgun implements View.OnTouchListener {
                 @Override
                 public void run() {
                     if ((patron2 <= 25) && (patron2 > 0)) {
-                        Allmusicgun.OurSoundPlayer.playSound(getApplicationContext(), Allmusicgun.OurSoundPlayer.S10, 0);
+                        playSound(famas);
                         patron2 = patron2 - 1;
                         patron1.setText(String.valueOf(patron2));
                     }

@@ -6,7 +6,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,14 +18,14 @@ import java.util.TimerTask;
  */
 public class sg552 extends Allmusicgun implements View.OnTouchListener {
     Timer timer;
-    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C", "SG552","SHOTGUN_SUPER90"};
+    String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C", "SG552","SHOTGUN_SUPER90","DESERTEAGLE"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sg552);
         patron1 = (TextView) findViewById(R.id.sg552view);
         patron1.setText(String.valueOf(patron));
-        ImageView im3 = (ImageView) findViewById(R.id.sg552button);
+        ImageView im3 = (ImageView) findViewById(R.id.Desertbutton);
         im3.setOnTouchListener(this);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data);
@@ -92,6 +91,11 @@ public class sg552 extends Allmusicgun implements View.OnTouchListener {
                     Intent SHOTGUN_SUPER90 = new Intent(getApplicationContext(), shotgun_super90.class);
                     startActivity(SHOTGUN_SUPER90);
                 }
+                if (position == 9) {
+                    Toast.makeText(sg552.this, "Weapon Selected DESERTEAGLE", Toast.LENGTH_SHORT).show();
+                    Intent SHOTGUN_SUPER90 = new Intent(getApplicationContext(), Deserteagl.class);
+                    startActivity(SHOTGUN_SUPER90);
+                }
             }
 
 
@@ -104,7 +108,7 @@ public class sg552 extends Allmusicgun implements View.OnTouchListener {
 
     }
     public void Reweapon8(View v) {//Перезарядка
-        OurSoundPlayer.playSound(this, OurSoundPlayer.S3, 0);
+        playSound(reload);
         patron = 30;
         patron1.setText(String.valueOf(patron));
         try {
@@ -127,7 +131,7 @@ public class sg552 extends Allmusicgun implements View.OnTouchListener {
             timer = null;
         }
         if (patron == 0)
-            Allmusicgun.OurSoundPlayer.playSound(getApplicationContext(), Allmusicgun.OurSoundPlayer.S2, 0);
+            playSound(block);
         return true;
     }
     class UpdateTimeTask9 extends TimerTask {
@@ -137,7 +141,7 @@ public class sg552 extends Allmusicgun implements View.OnTouchListener {
                 @Override
                 public void run() {
                     if ((patron <= 30) && (patron > 0)) {
-                        Allmusicgun.OurSoundPlayer.playSound(getApplicationContext(), Allmusicgun.OurSoundPlayer.S14, 0);
+                        playSound(sg552);
                         patron = patron - 1;
                         patron1.setText(String.valueOf(patron));
                     }
