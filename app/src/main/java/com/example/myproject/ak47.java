@@ -173,7 +173,7 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
                 @Override
                 public void run() {
                     if ((patron <= 30) && (patron > 0)) {
-                        playSound(ak47);
+                       playSound(ak47);
                         patron = patron - 1;
                         patron1.setText(String.valueOf(patron));
                     }
