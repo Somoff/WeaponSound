@@ -90,8 +90,8 @@ android:background="@drawable/bacckgrond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/spinner74"
-        android:layout_alignParentTop="true"
-        android:layout_alignEnd="@+id/button6"
-        android:layout_toEndOf="@+id/textView42" />
+        android:layout_alignBottom="@+id/imageShare"
+        android:layout_alignEnd="@+id/imageButton12"
+        android:layout_toEndOf="@+id/imageShare" />
 
 </RelativeLayout>

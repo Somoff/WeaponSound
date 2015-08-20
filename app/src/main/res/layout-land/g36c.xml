@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageButton9"
         android:background="@drawable/reload"
-        android:onClick="Reweapon7"
+        android:onClick="Reweapon8"
         android:layout_below="@+id/g36ctextView"
         android:layout_alignStart="@+id/imageButton6"
         android:layout_marginTop="27dp" />

@@ -13,13 +13,13 @@
         android:text="Medium Text"
         android:onClick="setPatronText"
         android:id="@+id/txtnumber"
-        android:layout_alignBottom="@+id/btnBass1"
-        android:layout_alignStart="@+id/btnBass1" />
+        android:layout_alignBottom="@+id/Desertbutton"
+        android:layout_alignStart="@+id/Desertbutton" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnBass1"
+        android:id="@+id/Desertbutton"
         android:background="@drawable/assaultrifle_ak47"
         android:onClick="Play"
         android:layout_below="@+id/imageEmail"
@@ -75,7 +75,7 @@
         android:id="@+id/imageButton7"
         android:background="@drawable/reload"
         android:onClick="Reweapon"
-        android:layout_below="@+id/btnBass1"
+        android:layout_below="@+id/Desertbutton"
         android:layout_alignStart="@+id/imageButton5" />
 
     <ImageView
@@ -90,8 +90,9 @@
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner47"
+        android:id="@+id/spinner4766"
         android:layout_alignBottom="@+id/imageShare"
+        android:layout_alignEnd="@+id/imageButton12"
         android:layout_toEndOf="@+id/imageShare" />
 
 </RelativeLayout>

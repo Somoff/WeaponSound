@@ -80,7 +80,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageButton14"
         android:background="@drawable/reload"
-        android:onClick="Reweapon2"
+        android:onClick="Reweapon6"
         android:layout_below="@+id/famasview"
         android:layout_alignStart="@+id/imageButton13" />
 
