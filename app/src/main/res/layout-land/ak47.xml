@@ -22,9 +22,8 @@
         android:id="@+id/Desertbutton"
         android:background="@drawable/assaultrifle_ak47"
         android:onClick="Play"
-        android:layout_below="@+id/imageEmail"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="84dp" />
+        android:layout_alignTop="@+id/imageView7"
+        android:layout_centerHorizontal="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -42,7 +41,8 @@
         android:id="@+id/imageInfo"
         android:background="@drawable/info"
         android:layout_alignTop="@+id/imageLike"
-        android:layout_toEndOf="@+id/imageLike" />
+        android:layout_toEndOf="@+id/imageLike"
+        android:onClick="AlertDialogAK47" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -87,12 +87,15 @@
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true" />
 
+
     <Spinner
+        android:id="@+id/spinner4766"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner4766"
-        android:layout_alignBottom="@+id/imageShare"
-        android:layout_alignEnd="@+id/imageButton12"
+        android:background="@drawable/btn_default_normal_disable"
+        android:spinnerMode="dropdown"
+        android:popupBackground="@drawable/btn_default_normal_disable"
+        android:layout_alignBottom="@+id/imageLike"
+        android:layout_alignEnd="@+id/Desertbutton"
         android:layout_toEndOf="@+id/imageShare" />
-
 </RelativeLayout>

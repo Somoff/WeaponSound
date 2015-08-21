@@ -1,6 +1,7 @@
 package com.example.myproject;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -108,6 +109,27 @@ public class Famas extends  Allmusicgun implements View.OnTouchListener {
         });
 
     }
+
+
+
+    public void AlertDialogFamas(View view) {
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(Famas.this);
+
+        builder.setTitle("Famas")
+                .setMessage("Страна: Франция \n Масса: 3,61кг \n Длина: 750мм \n Калибр: 5,56мм \n Начальная скорость пули: 960 м/c \n Максимальная дальность: 300м")
+                .setInverseBackgroundForced(true)
+                .setCancelable(false)
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+        android.app.AlertDialog alert = builder.create();
+        alert.show();
+    }
+
 
     public void Reweapon6(View v){//Перезарядка
         playSound(reload);

@@ -1,6 +1,7 @@
 package com.example.myproject;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 
 import android.os.Bundle;
@@ -108,6 +109,27 @@ Timer timer4;
 
         });
 
+    }
+
+
+
+
+    public void AlertDialogM4A1(View view) {
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(m4a1.this);
+
+        builder.setTitle("M4A1")
+                .setMessage("Страна: США \n Масса: 3,4кг \n Длина: 840мм \n Калибр: 5,56мм \n Начальная скорость пули: 905 м/c \n Максимальная дальность: 500м")
+                .setInverseBackgroundForced(true)
+                .setCancelable(false)
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+        android.app.AlertDialog alert = builder.create();
+        alert.show();
     }
 
 

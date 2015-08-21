@@ -1,5 +1,6 @@
 package com.example.myproject;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -108,6 +109,28 @@ public class Deserteagl extends Allmusicgun implements View.OnTouchListener {
         });
 
     }
+
+
+
+
+    public void AlertDialogDESERTEAGLE(View view) {
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(Deserteagl.this);
+
+        builder.setTitle("Desert Eagle")
+                .setMessage("Страна: США \n Масса: 1,7кг \n Длина: 269мм \n Калибр: .41 Magnum \n Начальная скорость пули: 395 м/c \n Максимальная дальность: 200м")
+                .setInverseBackgroundForced(true)
+                .setCancelable(false)
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+        android.app.AlertDialog alert = builder.create();
+        alert.show();
+    }
+
     public void Reweapon10(View v){//Перезарядка
         playSound(Zatvor);
         patron9=7;

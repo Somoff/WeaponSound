@@ -1,5 +1,6 @@
 package com.example.myproject;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -106,6 +107,25 @@ public class shotgun_super90 extends Allmusicgun implements View.OnTouchListener
 
             });
         }
+
+
+    public void AlertDialogSHOTGUN(View view) {
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(shotgun_super90.this);
+
+        builder.setTitle("AK47")
+                .setMessage("Страна: Италия \n Масса: 3,8кг \n Длина: 1010мм \n Калибр: 18,5мм \n Начальная скорость пули: 380 м/c \n Максимальная дальность: 50м")
+                .setInverseBackgroundForced(true)
+                .setCancelable(false)
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+        android.app.AlertDialog alert = builder.create();
+        alert.show();
+    }
 
 
     @Override

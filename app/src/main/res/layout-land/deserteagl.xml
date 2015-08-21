@@ -13,7 +13,6 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Medium Text"
         android:id="@+id/txtnumberdesert"
-        android:layout_alignBottom="@+id/imageView7"
         android:layout_toStartOf="@+id/spinner4766" />
 
     <ImageButton
@@ -50,51 +49,50 @@
         android:layout_alignBottom="@+id/imageEmail"
         android:layout_toEndOf="@+id/imageEmail" />
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageButton5"
-        android:background="@drawable/next_21"
-
-        android:layout_centerVertical="true"
-        android:layout_alignParentEnd="true"
-        android:onClick="desertgo" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageButton7"
-        android:background="@drawable/reload"
-
-        android:onClick="Reweapon10"
-        android:layout_below="@+id/imageButton5"
-        android:layout_alignStart="@+id/imageButton5"
-        android:layout_marginTop="32dp" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView7"
-        android:background="@drawable/back_21"
-
-        android:onClick="backdesert"
-        android:layout_alignTop="@+id/imageButton5"
-        android:layout_alignStart="@+id/imageLike" />
-
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/spinner4766"
-        android:layout_alignBottom="@+id/imageShare"
-        android:layout_alignEnd="@+id/imageButton12"
-        android:layout_toEndOf="@+id/imageShare" />
+        android:background="@drawable/btn_default_normal_disable"
+        android:spinnerMode="dropdown"
+        android:popupBackground="@drawable/btn_default_normal_disable"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/imageShare"
+        android:layout_alignBottom="@+id/imageShare" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Desertbutton"
-        android:background="@drawable/handgun_desert_eagle"
+        android:background="@drawable/deagle_weapon"
         android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/imageEmail" />
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView10"
+        android:background="@drawable/back_21"
+        android:onClick="backaug"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton19"
+        android:background="@drawable/next_21"
+        android:onClick="goaug"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton20"
+        android:background="@drawable/reload"
+        android:onClick="Reweapon1"
+        android:layout_below="@+id/imageButton19"
+        android:layout_alignStart="@+id/imageButton19" />
 
 </RelativeLayout>

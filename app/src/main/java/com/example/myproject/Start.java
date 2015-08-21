@@ -2,20 +2,14 @@ package com.example.myproject;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
+import android.view.ContextThemeWrapper;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 /**
@@ -42,9 +36,12 @@ public class Start extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ak47.class);
                 startActivity(intent);
-                overridePendingTransition(R.anim.onetotwo, R.anim.onetwoo);
+//                overridePendingTransition(R.anim.onetotwo, R.anim.onetwoo);
             }
         });
+
+
+
 
 
 
@@ -54,7 +51,24 @@ public class Start extends Activity {
     }
 
 
+    public void qwertyuiop(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
+        builder.setTitle("О приложении")
+                .setMessage("Weapon Sound \n Version 0.0.1 \n \n \n Develops:\n Somoff \n Imperator \n Kraft \n @2015-2016")
+                .setIcon(R.drawable.about_icon)
+                .setInverseBackgroundForced(true)
+                .setCancelable(false)
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
@@ -109,6 +123,9 @@ public class Start extends Activity {
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
+
+
+
 
 
 }

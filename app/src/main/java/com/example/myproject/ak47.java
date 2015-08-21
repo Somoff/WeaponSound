@@ -3,8 +3,11 @@ package com.example.myproject;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.preference.DialogPreference;
+import android.support.v7.app.AlertDialog;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
@@ -107,7 +110,30 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
     }
 
 
-    @Override
+    public void AlertDialogAK47(View view) {
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
+
+        builder.setTitle("AK47")
+                .setMessage("Страна: СССР \n Масса: 4.3кг \n Длина: 870мм \n Калибр: 7,62мм \n Начальная скорость пули: 715 м/c \n Максимальная дальность: 400м")
+                .setInverseBackgroundForced(true)
+                .setCancelable(false)
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+        android.app.AlertDialog alert = builder.create();
+        alert.show();
+    }
+
+
+
+
+
+
+        @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
         if (hasFocus)
@@ -183,6 +209,8 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
         }
 
     }
+
+
 }
 
 

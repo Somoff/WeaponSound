@@ -1,5 +1,6 @@
 package com.example.myproject;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -104,9 +105,31 @@ public class sg552 extends Allmusicgun implements View.OnTouchListener {
             }
 
         });
-
-
     }
+
+
+
+    public void AlertDialogSG552(View view) {
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(sg552.this);
+
+        builder.setTitle("AK47")
+                .setMessage("Страна: Швейцария \n Масса: 4,1кг \n Длина: 998мм \n Калибр: 5,56мм \n Начальная скорость пули: 980 м/c \n Максимальная дальность: 650м")
+                .setInverseBackgroundForced(true)
+                .setCancelable(false)
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+        android.app.AlertDialog alert = builder.create();
+        alert.show();
+    }
+
+
+
+
     public void Reweapon8(View v) {//Перезарядка
         playSound(reload);
         patron = 30;

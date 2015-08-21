@@ -1,5 +1,6 @@
 package com.example.myproject;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -105,6 +106,26 @@ public class fs2000 extends Allmusicgun implements View.OnTouchListener {
 
         });
 
+    }
+
+
+
+    public void AlertDialogFS2000(View view) {
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(fs2000.this);
+
+        builder.setTitle("FS2000")
+                .setMessage("Страна: Бельгия \n Масса: 3,8кг \n Длина: 690мм \n Калибр: 5,56мм \n Начальная скорость пули: 900 м/c \n Максимальная дальность: 500м")
+                .setInverseBackgroundForced(true)
+                .setCancelable(false)
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+        android.app.AlertDialog alert = builder.create();
+        alert.show();
     }
 
 

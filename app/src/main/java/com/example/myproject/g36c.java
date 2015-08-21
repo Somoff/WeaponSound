@@ -1,5 +1,6 @@
 package com.example.myproject;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -106,6 +107,26 @@ public class g36c extends Allmusicgun implements View.OnTouchListener {
         });
 
     }
+
+
+    public void AlertDialogG36C(View view) {
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(g36c.this);
+
+        builder.setTitle("G36C")
+                .setMessage("Страна: Германия \n Масса: 3,63кг \n Длина: 755мм \n Калибр: 5,56мм \n Начальная скорость пули: 920 м/c \n Максимальная дальность: 300м")
+                .setInverseBackgroundForced(true)
+                .setCancelable(false)
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+        android.app.AlertDialog alert = builder.create();
+        alert.show();
+    }
+
 
 
     public void Reweapon8(View v) {//Перезарядка

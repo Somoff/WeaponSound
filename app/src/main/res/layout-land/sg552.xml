@@ -78,9 +78,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/spinner4sg552"
-        android:layout_alignBottom="@+id/imageShare"
-        android:layout_alignEnd="@+id/imageButton12"
-        android:layout_toEndOf="@+id/imageShare" />
+        android:background="@drawable/btn_default_normal_disable"
+        android:spinnerMode="dropdown"
+        android:popupBackground="@drawable/btn_default_normal_disable"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/Desertbutton"
+        android:layout_toEndOf="@+id/imageShare"
+        android:layout_alignBottom="@+id/imageShare" />
 
     <ImageView
         android:layout_width="wrap_content"

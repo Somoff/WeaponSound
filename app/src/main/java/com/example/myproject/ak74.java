@@ -1,6 +1,7 @@
 package com.example.myproject;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 
 import android.os.Bundle;
@@ -101,6 +102,10 @@ public class ak74 extends Allmusicgun implements View.OnTouchListener {
             }
 
 
+
+
+
+
             @Override
             public void onNothingSelected(AdapterView<?> arg0) {
             }
@@ -108,6 +113,28 @@ public class ak74 extends Allmusicgun implements View.OnTouchListener {
         });
 
     }
+
+
+
+
+    public void AlertDialogAK74(View view) {
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(ak74.this);
+
+        builder.setTitle("AK74")
+                .setMessage("Страна: СССР \n Масса: 3,3кг \n Длина: 940мм \n Калибр: 5,45мм \n Начальная скорость пули: 900 м/c \n Максимальная дальность: 650м")
+                .setInverseBackgroundForced(true)
+                .setCancelable(false)
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+        android.app.AlertDialog alert = builder.create();
+        alert.show();
+    }
+
 
 
     //  public void Play2(View v) { //Клик на выстрел
