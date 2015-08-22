@@ -91,9 +91,11 @@
         android:layout_alignTop="@+id/imageShare"
         android:background="@drawable/btn_default_normal_disable"        android:spinnerMode="dropdown"
         android:popupBackground="@drawable/btn_default_normal_disable"
-        android:layout_alignEnd="@+id/g36cView"
-        android:layout_toEndOf="@+id/imageShare"
-        android:layout_alignBottom="@+id/imageShare" />
+        android:layout_alignBottom="@+id/imageShare"
+        android:layout_alignRight="@+id/imageButton9"
+        android:layout_alignEnd="@+id/imageButton9"
+        android:layout_toRightOf="@+id/imageShare"
+        android:layout_toEndOf="@+id/imageShare" />
 
 
 </RelativeLayout>

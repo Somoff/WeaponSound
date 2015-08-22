@@ -76,6 +76,7 @@
         android:background="@drawable/reload"
         android:onClick="Reweapon"
         android:layout_below="@+id/Desertbutton"
+        android:layout_alignLeft="@+id/imageButton5"
         android:layout_alignStart="@+id/imageButton5" />
 
     <ImageView
@@ -96,6 +97,9 @@
         android:spinnerMode="dropdown"
         android:popupBackground="@drawable/btn_default_normal_disable"
         android:layout_alignBottom="@+id/imageLike"
-        android:layout_alignEnd="@+id/Desertbutton"
+        android:layout_alignTop="@+id/imageShare"
+        android:layout_alignRight="@+id/imageButton7"
+        android:layout_alignEnd="@+id/imageButton7"
+        android:layout_toRightOf="@+id/imageShare"
         android:layout_toEndOf="@+id/imageShare" />
 </RelativeLayout>
