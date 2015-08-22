@@ -116,7 +116,7 @@ public class Famas extends  Allmusicgun implements View.OnTouchListener {
         android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(Famas.this);
 
         builder.setTitle("Famas")
-                .setMessage("Страна: Франция \n Масса: 3,61кг \n Длина: 750мм \n Калибр: 5,56мм \n Начальная скорость пули: 960 м/c \n Максимальная дальность: 300м")
+                .setMessage(" Страна: Франция \n Масса: 3,61кг \n Длина: 750мм \n Калибр: 5,56мм \n Начальная скорость пули: 960 м/c \n Максимальная дальность: 300м")
                 .setInverseBackgroundForced(true)
                 .setCancelable(false)
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

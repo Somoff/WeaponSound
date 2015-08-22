@@ -113,7 +113,7 @@ public class g36c extends Allmusicgun implements View.OnTouchListener {
         android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(g36c.this);
 
         builder.setTitle("G36C")
-                .setMessage("Страна: Германия \n Масса: 3,63кг \n Длина: 755мм \n Калибр: 5,56мм \n Начальная скорость пули: 920 м/c \n Максимальная дальность: 300м")
+                .setMessage(" Страна: Германия \n Масса: 3,63кг \n Длина: 755мм \n Калибр: 5,56мм \n Начальная скорость пули: 920 м/c \n Максимальная дальность: 300м")
                 .setInverseBackgroundForced(true)
                 .setCancelable(false)
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

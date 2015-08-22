@@ -121,7 +121,7 @@ public class ak74 extends Allmusicgun implements View.OnTouchListener {
         android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(ak74.this);
 
         builder.setTitle("AK74")
-                .setMessage("Страна: СССР \n Масса: 3,3кг \n Длина: 940мм \n Калибр: 5,45мм \n Начальная скорость пули: 900 м/c \n Максимальная дальность: 650м")
+                .setMessage(" Страна: СССР \n Масса: 3,3кг \n Длина: 940мм \n Калибр: 5,45мм \n Начальная скорость пули: 900 м/c \n Максимальная дальность: 650м")
                 .setInverseBackgroundForced(true)
                 .setCancelable(false)
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

@@ -116,7 +116,7 @@ public class aug_activity extends Allmusicgun implements View.OnTouchListener {
         android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(aug_activity.this);
 
         builder.setTitle("AUG")
-                .setMessage("Страна: Австрия \n Масса: 3,3кг \n Длина: 690мм \n Калибр: 5,56мм \n Начальная скорость пули: 992 м/c \n Максимальная дальность: 650м")
+                .setMessage(" Страна: Австрия \n Масса: 3,3кг \n Длина: 690мм \n Калибр: 5,56мм \n Начальная скорость пули: 992 м/c \n Максимальная дальность: 650м")
                 .setInverseBackgroundForced(true)
                 .setCancelable(false)
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
