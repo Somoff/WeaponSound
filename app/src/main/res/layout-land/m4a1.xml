@@ -41,7 +41,8 @@
         android:id="@+id/imageInfo"
         android:background="@drawable/info"
         android:layout_alignTop="@+id/imageLike"
-        android:layout_toEndOf="@+id/imageLike" />
+        android:layout_toEndOf="@+id/imageLike"
+        android:onClick="AlertDialogM4A1" />
 
     <ImageButton
         android:layout_width="wrap_content"

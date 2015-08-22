@@ -13,7 +13,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Medium Text"
         android:id="@+id/txtnumberdesert"
-        android:layout_toStartOf="@+id/spinner4766" />
+        android:layout_above="@+id/imageButton20"
+        android:layout_toEndOf="@+id/imageInfo" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -31,7 +32,8 @@
         android:id="@+id/imageInfo"
         android:background="@drawable/info"
         android:layout_alignTop="@+id/imageLike"
-        android:layout_toEndOf="@+id/imageLike" />
+        android:layout_toEndOf="@+id/imageLike"
+        android:onClick="AlertDialogDESERTEAGLE" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -73,7 +75,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView10"
         android:background="@drawable/back_21"
-        android:onClick="backaug"
+        android:onClick="backdesert"
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true" />
 
@@ -82,7 +84,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageButton19"
         android:background="@drawable/next_21"
-        android:onClick="goaug"
+        android:onClick="desertgo"
         android:layout_centerVertical="true"
         android:layout_alignParentEnd="true" />
 
@@ -91,7 +93,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageButton20"
         android:background="@drawable/reload"
-        android:onClick="Reweapon1"
+        android:onClick="Reweapon10"
         android:layout_below="@+id/imageButton19"
         android:layout_alignStart="@+id/imageButton19" />
 
