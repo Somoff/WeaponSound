@@ -12,6 +12,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -30,6 +33,9 @@ public class Deserteagl extends Allmusicgun implements View.OnTouchListener {
         patron1.setText(String.valueOf(patron9));
         ImageView something = (ImageView) findViewById(R.id.Desertbutton);
         something.setOnTouchListener(this);
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

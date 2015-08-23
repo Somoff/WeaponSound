@@ -13,6 +13,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.io.IOException;
 
 /**
@@ -37,6 +40,9 @@ public class Allmusicgun extends Activity {
         patron1 = (TextView) findViewById(R.id.txtnumber);
         patron1.setText(String.valueOf(patron));
         ImageView image = (ImageView) findViewById(R.id.Desertbutton);
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         mDecorView = getWindow().getDecorView();
         setTitle("FullScreen");
@@ -56,7 +62,7 @@ public class Allmusicgun extends Activity {
         ak74 = loadSound("ak74_fire.ogg");
         reloadshotgun = loadSound("xmdeploy.ogg");
         deagle = loadSound("deagle-2.ogg");
-        Zatvor = loadSound("Zatvor.ogg");
+        Zatvor = loadSound("zzatvor.ogg");
     }
 
 

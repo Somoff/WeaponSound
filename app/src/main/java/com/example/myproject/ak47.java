@@ -15,6 +15,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class ak47 extends  Allmusicgun implements View.OnTouchListener {
     Timer timer;
 
@@ -28,6 +31,9 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
         something.setOnTouchListener(this);
         mDecorView = getWindow().getDecorView();
         setTitle("FullScreen");
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data);

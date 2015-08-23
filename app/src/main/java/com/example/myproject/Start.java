@@ -12,6 +12,9 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 /**
  * Created by Somoff on 11.08.2015.
  */
@@ -27,7 +30,9 @@ public class Start extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start_layout);
-
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         mDecorView = getWindow().getDecorView();
         setTitle("FullScreen");
         final ImageButton b = (ImageButton) findViewById(R.id.imageButton4);
