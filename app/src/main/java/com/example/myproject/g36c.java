@@ -1,7 +1,14 @@
 package com.example.myproject;
 
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.AssetFileDescriptor;
+import android.content.res.AssetManager;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -14,12 +21,21 @@ import android.widget.Toast;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
 
-public class g36c extends Allmusicgun implements View.OnTouchListener {
+public class g36c extends Activity implements View.OnTouchListener {
     Timer timer;
+    View mDecorView;
+    public SoundPool mSoundPool;
+    public AssetManager mAssetManager;
+    public int ak47, aug, famas, ak74, fs2000, g36c, m4a1, sg552, shotgun_super90, reload, block, reloadshotgun, deagle, Zatvor;
+    public int mCountLoadedSound;
+    public Context mContext;
+    public TextView patron1;
+    private ProgressDialog mProgressDialog;
     String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C","SG552","SHOTGUN_SUPER90","DESERTEAGLE"};
     public int patron3 = 20;
 
@@ -34,6 +50,14 @@ public class g36c extends Allmusicgun implements View.OnTouchListener {
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+        mDecorView = getWindow().getDecorView();
+        setTitle("FullScreen");
+        mContext = this;
+        mSoundPool = new SoundPool(3, AudioManager.STREAM_MUSIC, 0);
+        mAssetManager = getAssets();
+        reload = loadSound("reload.ogg");
+        block = loadSound("block.ogg");
+        g36c = loadSound("g36c_fire.ogg");
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -113,7 +137,23 @@ public class g36c extends Allmusicgun implements View.OnTouchListener {
         });
 
     }
+    public void playSound(int sound) {
+        if (sound > 0)
+            mSoundPool.play(sound, 1, 1, 1, 0, 1);
+    }
 
+    public int loadSound(String fileName) {
+        AssetFileDescriptor afd = null;
+        try {
+            afd = mAssetManager.openFd(fileName);
+        } catch (IOException e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Не могу загрузить файл " + fileName,
+                    Toast.LENGTH_SHORT).show();
+            return -1;
+        }
+        return mSoundPool.load(afd, 1);
+    }
 
     public void AlertDialogG36C(View view) {
         android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(g36c.this);
@@ -192,4 +232,12 @@ public class g36c extends Allmusicgun implements View.OnTouchListener {
         startActivity(intent);
         overridePendingTransition(R.anim.onetotwo, R.anim.onetwoo);
     }
+    protected void onPause() {
+        super.onPause();
+        if (mSoundPool != null) {
+            mSoundPool.release();
+            mSoundPool = null;
+        }
+    }
 }
+

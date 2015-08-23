@@ -116,23 +116,7 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
     }
 
 
-    public void AlertDialogAK47(View view) {
-        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
 
-        builder.setTitle("AK47")
-                .setMessage(" Страна: СССР \n Масса: 4.3кг \n Длина: 870мм \n Калибр: 7,62мм \n Начальная скорость пули: 715 м/c \n Максимальная дальность: 400м")
-                .setInverseBackgroundForced(true)
-                .setCancelable(false)
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                });
-
-        android.app.AlertDialog alert = builder.create();
-        alert.show();
-    }
 
 
 
@@ -208,6 +192,7 @@ public class ak47 extends  Allmusicgun implements View.OnTouchListener {
                        playSound(ak47);
                         patron = patron - 1;
                         patron1.setText(String.valueOf(patron));
+
                     }
                 }
 

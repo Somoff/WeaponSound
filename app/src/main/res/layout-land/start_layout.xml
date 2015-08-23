@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageButton4"
         android:nestedScrollingEnabled="false"
-        android:onClick="Chooseweapon"
+        android:onClick="choose"
         android:layout_marginTop="55dp"
         android:layout_below="@+id/imageShare"
         android:layout_alignLeft="@+id/imageButton3"
