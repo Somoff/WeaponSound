@@ -17,9 +17,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/shotgunButton"
-        android:background="@drawable/assaultrifle_fs2000"
+        android:background="@drawable/fs2000"
         android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/imageInfo" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -55,8 +55,8 @@
         android:background="@drawable/reload"
         android:onClick="Reweapon7"
         android:layout_below="@+id/fss2000View"
-        android:layout_alignStart="@+id/imageButton15"
-        android:layout_marginTop="27dp" />
+        android:layout_alignLeft="@+id/imageButton15"
+        android:layout_alignStart="@+id/imageButton15" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -101,8 +101,10 @@
         android:background="@drawable/btn_default_normal_disable"
         android:spinnerMode="dropdown"
         android:popupBackground="@drawable/btn_default_normal_disable"
-        android:layout_alignEnd="@+id/shotgunButton"
-        android:layout_toEndOf="@+id/imageShare"
-        android:layout_alignBottom="@+id/imageShare" />
+        android:layout_alignBottom="@+id/imageShare"
+        android:layout_alignRight="@+id/imageButton16"
+        android:layout_alignEnd="@+id/imageButton16"
+        android:layout_toRightOf="@+id/imageShare"
+        android:layout_toEndOf="@+id/imageShare" />
 
 </RelativeLayout>

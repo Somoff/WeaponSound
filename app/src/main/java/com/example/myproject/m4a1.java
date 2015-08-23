@@ -123,7 +123,7 @@ Timer timer4;
         android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(m4a1.this);
 
         builder.setTitle("M4A1")
-                .setMessage("Страна: США \n Масса: 3,4кг \n Длина: 840мм \n Калибр: 5,56мм \n Начальная скорость пули: 905 м/c \n Максимальная дальность: 500м")
+                .setMessage(" Страна: США \n Масса: 3,4кг \n Длина: 840мм \n Калибр: 5,56мм \n Начальная скорость пули: 905 м/c \n Максимальная дальность: 500м")
                 .setInverseBackgroundForced(true)
                 .setCancelable(false)
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

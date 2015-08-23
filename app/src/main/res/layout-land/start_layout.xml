@@ -46,12 +46,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButton4"
-        android:background="@drawable/weapon"
         android:nestedScrollingEnabled="false"
         android:onClick="Chooseweapon"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="133dp" />
+        android:layout_marginTop="55dp"
+        android:layout_below="@+id/imageShare"
+        android:layout_alignLeft="@+id/imageButton3"
+        android:layout_alignStart="@+id/imageButton3"
+        android:background="@drawable/weapon" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -86,6 +87,7 @@
         android:background="@drawable/share"
         android:id="@+id/imageShare"
         android:layout_alignBottom="@+id/imageEmail"
-        android:layout_toEndOf="@+id/imageEmail" />
+        android:layout_toEndOf="@+id/imageEmail"
+        android:onClick="shareButton" />
 
 </RelativeLayout>

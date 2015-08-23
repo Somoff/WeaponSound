@@ -102,7 +102,10 @@ android:background="@drawable/bacckgrond"
         android:background="@drawable/btn_default_normal_disable"
         android:spinnerMode="dropdown"
         android:popupBackground="@drawable/btn_default_normal_disable"
-        android:layout_alignEnd="@+id/imageView64"
+        android:layout_alignTop="@+id/imageShare"
+        android:layout_alignRight="@+id/imageButton12"
+        android:layout_alignEnd="@+id/imageButton12"
+        android:layout_toRightOf="@+id/imageShare"
         android:layout_toEndOf="@+id/imageShare" />
 
 </RelativeLayout>

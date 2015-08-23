@@ -119,7 +119,7 @@ public class sg552 extends Allmusicgun implements View.OnTouchListener {
         android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(sg552.this);
 
         builder.setTitle("AK47")
-                .setMessage("Страна: Швейцария \n Масса: 4,1кг \n Длина: 998мм \n Калибр: 5,56мм \n Начальная скорость пули: 980 м/c \n Максимальная дальность: 650м")
+                .setMessage(" Страна: Швейцария \n Масса: 4,1кг \n Длина: 998мм \n Калибр: 5,56мм \n Начальная скорость пули: 980 м/c \n Максимальная дальность: 650м")
                 .setInverseBackgroundForced(true)
                 .setCancelable(false)
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

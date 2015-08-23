@@ -67,9 +67,12 @@
         android:background="@drawable/btn_default_normal_disable"
         android:spinnerMode="dropdown"
         android:popupBackground="@drawable/btn_default_normal_disable"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/imageShare"
-        android:layout_alignBottom="@+id/imageShare" />
+        android:layout_alignBottom="@+id/imageShare"
+        android:layout_alignTop="@+id/imageShare"
+        android:layout_alignRight="@+id/imageButton20"
+        android:layout_alignEnd="@+id/imageButton20"
+        android:layout_toRightOf="@+id/imageShare"
+        android:layout_toEndOf="@+id/imageShare" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -103,7 +106,9 @@
         android:id="@+id/imageButton20"
         android:background="@drawable/reload"
         android:onClick="Reweapon10"
+        android:layout_marginTop="17dp"
         android:layout_below="@+id/imageButton19"
+        android:layout_alignLeft="@+id/imageButton19"
         android:layout_alignStart="@+id/imageButton19" />
 
 </RelativeLayout>

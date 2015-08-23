@@ -120,7 +120,7 @@ public class fs2000 extends Allmusicgun implements View.OnTouchListener {
         android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(fs2000.this);
 
         builder.setTitle("FS2000")
-                .setMessage("Страна: Бельгия \n Масса: 3,8кг \n Длина: 690мм \n Калибр: 5,56мм \n Начальная скорость пули: 900 м/c \n Максимальная дальность: 500м")
+                .setMessage(" Страна: Бельгия \n Масса: 3,8кг \n Длина: 690мм \n Калибр: 5,56мм \n Начальная скорость пули: 900 м/c \n Максимальная дальность: 500м")
                 .setInverseBackgroundForced(true)
                 .setCancelable(false)
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
