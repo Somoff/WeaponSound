@@ -9,6 +9,7 @@ import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -29,17 +30,17 @@ import java.util.TimerTask;
 /**
  * Created by asass on 14.08.2015.
  */
-public class Allmusicgun extends Activity implements View.OnTouchListener{
+public class Allmusicgun extends Activity implements View.OnTouchListener {
     Timer timer;
     View mDecorView;
-    public SoundPool mSoundPool;
-    public AssetManager mAssetManager;
-    public int ak47, aug, famas, ak74, fs2000, g36c, m4a1, sg552, shotgun_super90, reload, block, reloadshotgun, deagle, Zatvor;
-    public int mCountLoadedSound;
-    public Context mContext;
+    private SoundPool mSoundPool;
+    private AssetManager mAssetManager;
+    private int ak47, aug, famas, ak74, fs2000, g36c, m4a1, sg552, shotgun_super90, reload, block, reloadshotgun, deagle, Zatvor;
+    private int mCountLoadedSound;
+    private Context mContext;
     private ProgressDialog mProgressDialog;
-    public TextView patron1;
-    public int patron = 30;
+    private TextView patron1;
+    private int patron = 30;
     String[] data = {"AK47", "AK74", "AUG", "M4A1", "FAMAS", "FS2000", "G36C", "SG552", "SHOTGUN_SUPER90", "DESERTEAGLE"};
 
     @Override
@@ -60,19 +61,19 @@ public class Allmusicgun extends Activity implements View.OnTouchListener{
         mSoundPool = new SoundPool(3, AudioManager.STREAM_MUSIC, 0);
         mAssetManager = getAssets();
         ak47 = loadSound("ak47_fire.ogg");
-      //  aug = loadSound("aug_fire.ogg");
-     //   famas = loadSound("famasf1_fire.ogg");
-      //  fs2000 = loadSound("fs2000_fire.ogg");
-      //  m4a1 = loadSound("m4a1_fire.ogg");
-     //   sg552 = loadSound("sg552_fire.ogg");
-     //   shotgun_super90 = loadSound("xm1014.ogg");
+        //  aug = loadSound("aug_fire.ogg");
+        //   famas = loadSound("famasf1_fire.ogg");
+        //  fs2000 = loadSound("fs2000_fire.ogg");
+        //  m4a1 = loadSound("m4a1_fire.ogg");
+        //   sg552 = loadSound("sg552_fire.ogg");
+        //   shotgun_super90 = loadSound("xm1014.ogg");
         reload = loadSound("reload.ogg");
         block = loadSound("block.ogg");
-    //    g36c = loadSound("g36c_fire.ogg");
-    //    ak74 = loadSound("ak74_fire.ogg");
-    //    reloadshotgun = loadSound("xmdeploy.ogg");
-   //     deagle = loadSound("deagle-2.ogg");
-   //     Zatvor = loadSound("zzatvor.ogg");
+        //    g36c = loadSound("g36c_fire.ogg");
+        //    ak74 = loadSound("ak74_fire.ogg");
+        //    reloadshotgun = loadSound("xmdeploy.ogg");
+        //     deagle = loadSound("deagle-2.ogg");
+        //     Zatvor = loadSound("zzatvor.ogg");
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
@@ -152,6 +153,39 @@ public class Allmusicgun extends Activity implements View.OnTouchListener{
 
     }
 
+
+    //==================ВЫЕБУ СУКУ ЕСЛИ ОПЯТЬ УДАЛИШЬ===============================================
+
+
+    public void shareButton(View view) {
+
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        String shareBody = "Here is the share content body";
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+        startActivity(Intent.createChooser(sharingIntent, "Share via"));
+
+    }
+
+    Intent intent = null, chooser=null;
+    public void sendGmail(View view) {
+        intent = new Intent(Intent.ACTION_SEND);
+        intent.setData(Uri.parse("maito:"));
+        String[] to={"wildmillcompany@gmail.com"};
+        intent.putExtra(Intent.EXTRA_EMAIL, to);
+        intent.putExtra(Intent.EXTRA_SUBJECT, "pols");
+        intent.putExtra(Intent.EXTRA_TEXT, "fefef");
+        intent.setType("message/rfc822");
+        chooser=Intent.createChooser(intent,"Send Email");
+        startActivity(chooser);
+
+
+
+
+        //==============================================================================================
+    }
+
     public void AlertDialogAK47(View view) {
         android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(this);
 
@@ -190,16 +224,15 @@ public class Allmusicgun extends Activity implements View.OnTouchListener{
         return mSoundPool.load(afd, 1);
     }
 
-    public void shareButton(View view) {
 
-        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-        sharingIntent.setType("text/plain");
-        String shareBody = "Here is the share content body";
-        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
-        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
-        startActivity(Intent.createChooser(sharingIntent, "Share via"));
 
-    }
+
+
+
+
+
+
+
 
 
     public void Reweapon(View v) {//Перезарядка

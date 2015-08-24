@@ -18,7 +18,7 @@ import com.google.android.gms.ads.AdView;
 /**
  * Created by Somoff on 11.08.2015.
  */
-public class Start extends Activity {
+public class Start extends Allmusicgun {
 
     View mDecorView;
 
@@ -60,7 +60,7 @@ public class Start extends Activity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         builder.setTitle("О приложении")
-                .setMessage("Weapon Sound \n Version 0.0.1 \n \n \n Develops:\n Somoff \n Imperator \n Kraft \n @2015-2016")
+                .setMessage("Weapon Sound \n Version 0.0.1 \n \n \n Develops:\n Somoff \n Imperator \n Kraft \n @2015-2016 \n Если вы хоитет поддержать преокт: \n Яндекс.Деньги: 410011031161988")
                 .setIcon(R.drawable.about_icon)
                 .setInverseBackgroundForced(true)
                 .setCancelable(false)

@@ -56,7 +56,8 @@
         android:background="@drawable/gmail_spinner"
         android:id="@+id/imageEmail"
         android:layout_alignTop="@+id/imageInfo"
-        android:layout_toEndOf="@+id/imageInfo" />
+        android:layout_toEndOf="@+id/imageInfo"
+        android:onClick="gmailSendMain" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -64,7 +65,8 @@
         android:background="@drawable/share"
         android:id="@+id/imageShare"
         android:layout_alignBottom="@+id/imageEmail"
-        android:layout_toEndOf="@+id/imageEmail" />
+        android:layout_toEndOf="@+id/imageEmail"
+        android:onClick="shareButtons" />
 
     <ImageView
         android:layout_width="wrap_content"

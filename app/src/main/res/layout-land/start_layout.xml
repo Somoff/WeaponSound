@@ -40,7 +40,8 @@
         android:id="@+id/imageButton3"
         android:background="@drawable/gmail"
         android:layout_below="@+id/imageButton4"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="sendGmail" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -79,7 +80,8 @@
         android:background="@drawable/gmail_spinner"
         android:id="@+id/imageEmail"
         android:layout_alignTop="@+id/imageInfo"
-        android:layout_toEndOf="@+id/imageInfo" />
+        android:layout_toEndOf="@+id/imageInfo"
+        android:onClick="sendGmail" />
 
     <ImageButton
         android:layout_width="wrap_content"
