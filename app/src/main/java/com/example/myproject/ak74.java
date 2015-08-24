@@ -80,7 +80,7 @@ public class ak74 extends Activity implements View.OnTouchListener {
 
                 if (position == 0){
                     Toast.makeText(ak74.this, "Weapon Selected AK47", Toast.LENGTH_SHORT).show();
-                    Intent ak47 = new Intent(getApplicationContext(), ak47.class);
+                    Intent ak47 = new Intent(getApplicationContext(), Allmusicgun.class);
                     startActivity(ak47);
                 }
                 if(position == 1){

@@ -91,7 +91,7 @@ public class Allmusicgun extends Activity implements View.OnTouchListener{
 
                 if (position == 0) {
                     Toast.makeText(Allmusicgun.this, "Weapon Selected AK47", Toast.LENGTH_SHORT).show();
-                    Intent ak47 = new Intent(getApplicationContext(), ak47.class);
+                    Intent ak47 = new Intent(getApplicationContext(), Allmusicgun.class);
                     startActivity(ak47);
                 }
                 if (position == 1) {
@@ -171,19 +171,6 @@ public class Allmusicgun extends Activity implements View.OnTouchListener{
     }
 
 
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        if (hasFocus) {
-            mDecorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                    | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                    | View.SYSTEM_UI_FLAG_FULLSCREEN
-                    | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
-
-        }
-    }
 
     public void playSound(int sound) {
         if (sound > 0)

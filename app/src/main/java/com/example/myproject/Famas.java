@@ -32,7 +32,7 @@ public class Famas extends Activity implements View.OnTouchListener {
     View mDecorView;
     public SoundPool mSoundPool;
     public AssetManager mAssetManager;
-    public int ak47, aug, famas, ak74, fs2000, g36c, m4a1, sg552, shotgun_super90, reload, block, reloadshotgun, deagle, Zatvor;
+    public int  famas,reload, block;
     public int mCountLoadedSound;
     public Context mContext;
     private ProgressDialog mProgressDialog;
@@ -78,7 +78,7 @@ public class Famas extends Activity implements View.OnTouchListener {
 
                 if (position == 0) {
                     Toast.makeText(Famas.this, "Weapon Selected AK47", Toast.LENGTH_SHORT).show();
-                    Intent ak47 = new Intent(getApplicationContext(), ak47.class);
+                    Intent ak47 = new Intent(getApplicationContext(), Allmusicgun.class);
                     startActivity(ak47);
                 }
                 if (position == 1) {
@@ -194,7 +194,7 @@ public class Famas extends Activity implements View.OnTouchListener {
         if (event.getAction() == MotionEvent.ACTION_DOWN ) {
             if (timer5 == null ) {
                 timer5 = new Timer();
-                timer5.scheduleAtFixedRate(new UpdateTimeTask5(), 100, 200);}
+                timer5.scheduleAtFixedRate(new UpdateTimeTask5(), 70, 200);}
         } else if (event.getAction() == MotionEvent.ACTION_UP ) {
             timer5.cancel();
             timer5 = null;

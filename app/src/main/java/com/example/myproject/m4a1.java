@@ -79,7 +79,7 @@ Timer timer4;
 
                 if (position == 0){
                     Toast.makeText(m4a1.this, "Weapon Selected AK47", Toast.LENGTH_SHORT).show();
-                    Intent ak47 = new Intent(getApplicationContext(), ak47.class);
+                    Intent ak47 = new Intent(getApplicationContext(), Allmusicgun.class);
                     startActivity(ak47);
                 }
                 if(position == 1){
@@ -215,7 +215,7 @@ Timer timer4;
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
             if (timer4 == null) {
                 timer4 = new Timer();
-                timer4.scheduleAtFixedRate(new UpdateTimeTask4(), 50, 180);
+                timer4.scheduleAtFixedRate(new UpdateTimeTask4(), 70, 180);
             }
         } else if (event.getAction() == MotionEvent.ACTION_UP) {
             timer4.cancel();

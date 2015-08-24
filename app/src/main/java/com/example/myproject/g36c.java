@@ -77,7 +77,7 @@ public class g36c extends Activity implements View.OnTouchListener {
 
                 if (position == 0) {
                     Toast.makeText(g36c.this, "Weapon Selected AK47", Toast.LENGTH_SHORT).show();
-                    Intent ak47 = new Intent(getApplicationContext(), ak47.class);
+                    Intent ak47 = new Intent(getApplicationContext(), Allmusicgun.class);
                     startActivity(ak47);
                 }
                 if (position == 1) {
@@ -192,7 +192,7 @@ public class g36c extends Activity implements View.OnTouchListener {
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
             if (timer == null) {
                 timer = new Timer();
-                timer.scheduleAtFixedRate(new UpdateTimeTask5(), 50, 400);
+                timer.scheduleAtFixedRate(new UpdateTimeTask5(), 70, 400);
             }
         } else if (event.getAction() == MotionEvent.ACTION_UP) {
             timer.cancel();
