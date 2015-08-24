@@ -81,7 +81,8 @@
         android:id="@+id/imageEmail"
         android:layout_alignTop="@+id/imageInfo"
         android:layout_toEndOf="@+id/imageInfo"
-        android:onClick="sendGmail" />
+        android:onClick="sendGmail"
+        android:nestedScrollingEnabled="false" />
 
     <ImageButton
         android:layout_width="wrap_content"

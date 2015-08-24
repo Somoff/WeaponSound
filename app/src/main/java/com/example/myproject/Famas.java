@@ -10,6 +10,7 @@ import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -138,6 +139,40 @@ public class Famas extends Activity implements View.OnTouchListener {
         });
 
     }
+
+
+    //==================ВЫЕБУ СУКУ ЕСЛИ ОПЯТЬ УДАЛИШЬ===============================================
+
+
+    public void shareButton(View view) {
+
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        String shareBody = "Here is the share content body";
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+        startActivity(Intent.createChooser(sharingIntent, "Share via"));
+
+    }
+
+    Intent intent = null, chooser=null;
+    public void sendGmail(View view) {
+        intent = new Intent(Intent.ACTION_SEND);
+        intent.setData(Uri.parse("maito:"));
+        String[] to={"wildmillcompany@gmail.com"};
+        intent.putExtra(Intent.EXTRA_EMAIL, to);
+        intent.putExtra(Intent.EXTRA_SUBJECT, "pols");
+        intent.putExtra(Intent.EXTRA_TEXT, "fefef");
+        intent.setType("message/rfc822");
+        chooser=Intent.createChooser(intent,"Send Email");
+        startActivity(chooser);
+
+
+
+
+        //==============================================================================================
+    }
+
     public void playSound(int sound) {
         if (sound > 0)
             mSoundPool.play(sound, 1, 1, 1, 0, 1);

@@ -58,7 +58,7 @@ android:background="@drawable/bacckgrond"
         android:id="@+id/imageEmail"
         android:layout_alignTop="@+id/imageInfo"
         android:layout_toEndOf="@+id/imageInfo"
-        android:onClick="gmailSendMain" />
+        android:onClick="sendGmail" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -67,7 +67,7 @@ android:background="@drawable/bacckgrond"
         android:id="@+id/imageShare"
         android:layout_alignBottom="@+id/imageEmail"
         android:layout_toEndOf="@+id/imageEmail"
-        android:onClick="shareButtons" />
+        android:onClick="shareButton" />
 
     <ImageButton
         android:layout_width="wrap_content"
